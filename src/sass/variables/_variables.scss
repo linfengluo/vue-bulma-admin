@@ -1,0 +1,9 @@
+@import "bulma";
+@import "menu";
+
+$header-height: 50px !default;
+$header-backgrund: $primary !default;
+$header-backgrund-hover: darken($primary, 5%);
+
+
+$space: 6px !default;

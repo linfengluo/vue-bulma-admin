@@ -1,0 +1,58 @@
+@import "../../../sass/variables/variables";
+.vb-menu{
+    padding: $space * 2 $space * 2 0;
+    height: 100%;
+    overflow-y: auto;
+    background-color: $menu-backgorund-base;
+    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+
+    &__subtitle{
+        padding: 0 $space;
+        height: $menu-item-height;
+        line-height: $menu-item-height;
+        color: $grey;
+    }
+
+
+    &__item{
+        display: flex;
+        margin-bottom: $space / 2;
+        justify-content: space-between;
+        height: $menu-item-height;
+        line-height: $menu-item-height;
+        cursor: pointer;
+        border-radius: $radius;
+
+        &:hover{
+            background-color: $menu-item-background-hover;
+        }
+
+        &--icon{
+            flex: 0 0 30px;
+            text-align: center;
+        }
+
+        &--text{
+            flex: 1;
+            padding: 0 $space * 2;
+            border-radius: $radius;
+        }
+    }
+
+    .is-active{
+        color: $menu-item-color-active;
+        background-color: $menu-item-background-active;
+    }
+
+    .is-opened{
+        background-color: $menu-item-background-hover;
+    }
+
+    &__group{
+        margin: 0 0 $space / 2 $space * 2 + 8;
+        padding: 0 $space * 2;
+        border-left: 1px solid $primary;
+        transition: all .2s ease-in-out;
+        overflow: hidden;
+    }
+}
