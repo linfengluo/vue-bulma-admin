@@ -1,0 +1,27 @@
+@import "../variables/variables";
+.title{
+    &.is-1{
+        font-size: 32px;
+    }
+
+    &.is-2{
+        font-size: 28px;
+    }
+
+    &.is-3{
+        font-size: 24px;
+    }
+
+    &.is-4{
+        font-size: 20px;
+    }
+
+    &.is-5{
+        font-size: 16px;
+    }
+
+    &.is-6{
+        font-size: 12px;
+    }
+}
+

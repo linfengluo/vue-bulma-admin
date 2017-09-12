@@ -10,9 +10,7 @@
         </vheader>
         <div class="vb-container">
             <vNavMenu :menuConfig="menuList" :openIndex="menuIndex"></vNavMenu>
-            <vContent>
-                <router-view></router-view>
-            </vContent>
+            <router-view></router-view>
         </div>
     </div>
 </template>
@@ -20,59 +18,15 @@
 <script>
     import vheader from '../components/layout/header/header.vue'
     import vNavMenu from '../components/layout/navMenu/navMenu.vue'
-    import vContent from '../components/layout/content/content.vue'
-    import vIcon from '../components/element/icon/main.vue'
+    import vIcon from '../elements/icon.vue'
+
+    import menuConfig from '../config/menu'
 
     export default {
         data() {
             return {
                 asideWidth: 250,
-                menuList: [
-                    {
-                        title: '首页',
-                        icon: 'home',
-                        link: '/',
-                        childern: []
-                    },
-                    {
-                        title: 'Layout 布局',
-                        icon: 'table',
-                        link: '',
-                        childern: [{
-                            menu: [
-                                {
-                                    title: 'header',
-                                    link: ''
-                                },
-                                {
-                                    title: 'asideMenu',
-                                    link: ''
-                                },
-                                {
-                                    title: 'content',
-                                    link: ''
-                                }
-                            ]
-                        }]
-                    },
-                    {
-                        title: 'Form 表单',
-                        icon: 'check-square-o',
-                        link: '',
-                        childern: [{
-                            menu: [
-                                {
-                                    title: 'Input',
-                                    link: ''
-                                },
-                                {
-                                    title: 'Checkbox',
-                                    link: ''
-                                }
-                            ]
-                        }]
-                    }
-                ],
+                menuList: menuConfig,
                 menuIndex: 1
             }
         },
@@ -80,7 +34,6 @@
         components: {
             vheader,
             vNavMenu,
-            vContent,
             vIcon
         },
 

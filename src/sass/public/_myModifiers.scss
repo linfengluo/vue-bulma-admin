@@ -10,6 +10,10 @@
             flex: 1;
         }
 
+        &--around{
+            justify-content: space-around;
+        }
+
         &--wrap{
             flex-wrap: wrap;
         }

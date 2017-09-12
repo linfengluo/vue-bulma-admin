@@ -22,7 +22,7 @@
 
 <script>
     import vMenuMixins from './menu'
-    import vIcon from '../../element/icon/main.vue'
+    import vIcon from '../../../elements/icon.vue'
 
     export default {
         name: 'vNavMenuItem',
@@ -42,7 +42,7 @@
             },
             index: {
                 type: [String, Number],
-                default: 0
+                default: -1
             }
         },
         components: {
@@ -51,7 +51,7 @@
         mixins: [vMenuMixins],
         watch: {
             isActive(val){
-                val && this.rootMenu.changeOpenIndex(this.index, true)
+                val && this.index !== -1 && this.rootMenu.changeOpenIndex(this.index, true)
             }
         },
         computed: {

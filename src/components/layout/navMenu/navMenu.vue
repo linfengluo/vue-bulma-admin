@@ -5,7 +5,7 @@
     <nav class="vb-menu" :style="'width: ' + width + 'px'">
         <template v-for="(menu, index) in menuConfig">
             <template v-if="menu.childern.length === 0">
-                <vNavMenuItem :title="menu.title" :link="menu.link" :icon="menu.icon" :index="index"></vNavMenuItem>
+                <vNavMenuItem :title="menu.title" :link="menu.link" :icon="menu.icon"></vNavMenuItem>
             </template>
             <vNavSubmenu :title="menu.title"
                          :icon="menu.icon"

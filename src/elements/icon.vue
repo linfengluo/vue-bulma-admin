@@ -6,7 +6,9 @@
         :class="{
             'is-small': size === 'small',
             'is-medium': size === 'medium',
-            'is-large': size === 'large'
+            'is-large': size === 'large',
+            'is-left': directions === 'left',
+            'is-right': directions === 'right'
         }"
     >
         <i :class="'fa fa-' + name"></i>
@@ -23,6 +25,10 @@
             size: {
                 type: String,
                 default: 'normal'
+            },
+            directions: {
+                type: String,
+                default: ''
             }
         }
     }

@@ -14,19 +14,7 @@
                 type: [String, Number],
                 default: 250
             }
-        },
-        data() {
-            return {}
-        },
-        components: {},
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {},
-        methods: {}
+        }
     }
 </script>
 
@@ -37,7 +25,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    padding: $space * 2;
+    padding: $space * 2 $space * 4;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
 }
