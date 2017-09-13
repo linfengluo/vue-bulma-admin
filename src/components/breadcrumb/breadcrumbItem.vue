@@ -27,31 +27,5 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../sass/variables/variables";
-.vb-breadcrumb{
-    &__link{
-        display: inline-block;
-        padding: 0;
-    }
-
-    &__item{
-        &:last-child{
-            cursor: default;
-            pointer-events: none;
-
-            a{
-                color: #363636;
-            }
-
-            .vb-breadcrumb__separator{
-                display: none;
-            }
-
-        }
-    }
-
-    &__separator{
-        margin: 0 $space + 2;
-    }
-}
+    @import "../../sass/components/breadcrumb";
 </style>

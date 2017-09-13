@@ -14,18 +14,6 @@
                 type: String,
                 default: '/'
             }
-        },
-        data() {
-            return {}
-        },
-        components: {},
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {},
-        methods: {}
+        }
     }
 </script>

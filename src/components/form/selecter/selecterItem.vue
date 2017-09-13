@@ -3,7 +3,10 @@
 -->
 <template>
     <option :value="value">
-        <span v-text="label"></span>
+         <span v-if="$slots.default || label">
+            <slot></slot>
+            <template v-if="!$slots.default">{{label}}</template>
+        </span>
     </option>
 </template>
 

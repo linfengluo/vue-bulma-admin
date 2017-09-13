@@ -4,7 +4,7 @@
 <template>
     <vContent>
         <vContentHeader>
-            <vTitle level="3">input 输入框</vTitle>
+            <vTitle level="3">input</vTitle>
             <vBreadcrumb slot="right">
                 <vBreadcrumbItem>Form</vBreadcrumbItem>
                 <vBreadcrumbItem>Input</vBreadcrumbItem>
@@ -17,7 +17,7 @@
         </vRow>
         <vCodePanel>
             <vRow>
-                <vCol size="6">
+                <vCol size="7">
                     <vInput v-model="input0"></vInput>
                     <vInput v-model="input12" state="danger"></vInput>
                     <vInput v-model="input14" state="success"></vInput>
@@ -37,6 +37,8 @@
 &lt;vInput v-model="input1" :disabled="true"&gt;&lt;/vInput&gt;
                 </code><code class="javascript">
 &lt;script&gt;
+// 之后的demo将忽略下面JS
+import {vInput} from '../../components/form/main'
 export default {
     data() {
         return {
@@ -45,6 +47,9 @@ export default {
             input12: '',
             input14: ''
         }
+    },
+    components:{
+        vInput
     }
 }
 &lt;/script&gt;
@@ -59,7 +64,7 @@ export default {
         </vRow>
         <vCodePanel>
             <vRow>
-                <vCol size="6">
+                <vCol size="7">
                     <vInput v-model="input2" leftIcon="envelope"></vInput>
                     <vInput v-model="input3" rightIcon="check"></vInput>
                     <vInput v-model="input4" leftIcon="envelope" rightIcon="check"></vInput>
@@ -85,7 +90,7 @@ export default {
         </vRow>
         <vCodePanel>
             <vRow>
-                <vCol size="6">
+                <vCol size="7">
                     <vInput v-model="input5" :hasAddons="true">
                         <div class="control" slot="prepend">
                             <span class="button is-static">
@@ -147,14 +152,15 @@ export default {
         </vRow>
         <vCodePanel>
             <vRow>
-                <vCol size="6">
+                <vCol size="7">
                     <vInput v-model="input8" size="small"></vInput>
                     <vInput v-model="input9"></vInput>
                     <vInput v-model="input10" size="medium"></vInput>
                     <vInput v-model="input11" size="large"></vInput>
                 </vCol>
                 <vCol >
-                    可通过 size 属性指定输入框的尺寸，除了默认的大小外，还提供了 large、medium 和 small 三种尺寸。
+                    通过 size 属性指定输入框的尺寸
+                    可选择的值： small | medium | large
                 </vCol>
             </vRow>
             <template slot="code" >
@@ -170,16 +176,13 @@ export default {
 </template>
 
 <script>
-    import vInput from '../../components/form/input/input.vue'
     import vContent from '../../components/layout/content/content.vue'
     import vContentHeader from '../../components/layout/content/header.vue'
-    import vTitle from '../../elements/title.vue'
-    import vBox from '../../elements/box.vue'
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/main'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import vButton from '../../elements/button.vue'
-    import vSelecter from '../../components/form/selecter/selecter.vue'
+    import {vBox, vTitle, vButton} from '../../elements/main'
+    import {vInput} from '../../components/form/main'
 
     export default {
         data() {
@@ -212,8 +215,7 @@ export default {
             vCodePanel,
             vRow,
             vCol,
-            vButton,
-            vSelecter
+            vButton
         },
         mixins: [],
         created(){

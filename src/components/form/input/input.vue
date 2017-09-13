@@ -172,8 +172,3 @@
     }
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
-.is-fullwidth{
-    width: 100%
-}
-</style>

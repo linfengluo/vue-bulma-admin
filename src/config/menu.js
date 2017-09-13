@@ -42,7 +42,11 @@ const menu = [
                 },
                 {
                     title: 'Checkbox',
-                    link: ''
+                    link: '/form/checkbox'
+                },
+                {
+                    title: 'Selecter',
+                    link: '/form/selecter'
                 }
             ]
         }]
