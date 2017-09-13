@@ -181,7 +181,7 @@ export default {
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/main'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import {vBox, vTitle, vButton} from '../../elements/main'
+    import {vTitle, vButton} from '../../elements/main'
     import {vInput} from '../../components/form/main'
 
     export default {
@@ -208,7 +208,6 @@ export default {
             vInput,
             vContent,
             vTitle,
-            vBox,
             vContentHeader,
             vBreadcrumb,
             vBreadcrumbItem,
@@ -216,15 +215,7 @@ export default {
             vRow,
             vCol,
             vButton
-        },
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {},
-        methods: {}
+        }
     }
 </script>
 

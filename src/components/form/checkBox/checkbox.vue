@@ -13,12 +13,14 @@
         <input type="checkbox"
                v-if="!isInGroup"
                :checked="isChecked"
+               :name="name"
                :disabled="disabled || (isOverLength && !isChecked)"
         >
         <input type="checkbox"
                v-if="isInGroup"
                :value="selfValue"
                :checked="isChecked"
+               :name="name"
                :disabled="disabled || (isOverLength && !isChecked)"
         >
         <span v-if="$slots.default || label">
@@ -48,6 +50,10 @@
             disabled: {
                 type: Boolean,
                 default: false
+            },
+            name: {
+                type: String,
+                default: ''
             }
         },
         data() {

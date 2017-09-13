@@ -19,18 +19,47 @@
         <vCodePanel>
             <vRow>
                 <vCol size="7">
-                    <vSelectGroup v-model="select1">
-                        <vSelectItem value="option1">option1</vSelectItem>
-                        <vSelectItem value="option2">option2</vSelectItem>
-                        <vSelectItem value="option3">option3</vSelectItem>
-                    </vSelectGroup>
-
-                    <div>
-                        已选择的值： {{select1}}
-                    </div>
+                    <vRow>
+                        <vCol>
+                            <vSelectGroup v-model="select1">
+                                <vSelectItem value="option1">option1</vSelectItem>
+                                <vSelectItem value="option2">option2</vSelectItem>
+                                <vSelectItem value="option3">option3</vSelectItem>
+                            </vSelectGroup>
+                        </vCol>
+                    </vRow>
+                    <vRow>
+                        <vCol>
+                            <vSelectGroup v-model="select15" :disabled="true">
+                                <vSelectItem value="option1">option1</vSelectItem>
+                                <vSelectItem value="option2">option2</vSelectItem>
+                                <vSelectItem value="option3">option3</vSelectItem>
+                            </vSelectGroup>
+                        </vCol>
+                    </vRow>
+                    <vRow>
+                        <vCol>
+                            <vSelectGroup v-model="select16">
+                                <vSelectItem value="option1" :disabled="true">option1</vSelectItem>
+                                <vSelectItem value="option2">option2</vSelectItem>
+                                <vSelectItem value="option3">option3</vSelectItem>
+                            </vSelectGroup>
+                        </vCol>
+                    </vRow>
+                    <vRow>
+                        <vCol>
+                            <vSelectGroup v-model="select17" :width="150">
+                                <vSelectItem value="option1">option1</vSelectItem>
+                                <vSelectItem value="option2">option2</vSelectItem>
+                                <vSelectItem value="option3">option3</vSelectItem>
+                            </vSelectGroup>
+                        </vCol>
+                    </vRow>
                 </vCol>
                 <vCol >
                     通过 value 属性绑定选择的值
+                    <p>通过 disabled 属性决定是否禁用 selecter 或 option</p>
+                    <p>通过 width 属性决定宽度</p>
                 </vCol>
 
             </vRow>
@@ -41,6 +70,22 @@
     &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
     &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
 &lt;/vSelectGroup&gt;
+&lt;vSelectGroup v-model="select15" :disabled="true"&gt;
+    &lt;vSelectItem value="option1"&gt;option1&lt;/vSelectItem&gt;
+    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
+    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
+&lt;/vSelectGroup&gt;
+&lt;vSelectGroup v-model="select16"&gt;
+    &lt;vSelectItem value="option1" :disabled="true"&gt;option1&lt;/vSelectItem&gt;
+    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
+    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
+&lt;/vSelectGroup&gt;
+&lt;vSelectGroup v-model="select17" :width="150"&gt;
+    &lt;vSelectItem value="option1"&gt;option1&lt;/vSelectItem&gt;
+    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
+    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
+&lt;/vSelectGroup&gt;
+
                 </code><code class="javascript">
 &lt;script&gt;
 import {vSelectGroup, vSelectItem} from '../../components/form/selecter/main'
@@ -59,8 +104,6 @@ export default {
                         </code>
             </template>
         </vCodePanel>
-
-
         <vRow>
             <vCol>
                 <vTitle level="4" :isMargin="true">Color 颜色</vTitle>
@@ -290,7 +333,10 @@ export default {
                 select11: '',
                 select12: '',
                 select13: '',
-                select14: ''
+                select14: '',
+                select15: '',
+                select16: '',
+                select17: ''
             }
         },
         components: {
@@ -304,18 +350,7 @@ export default {
             vCol,
             vSelectGroup,
             vSelectItem
-        },
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {},
-        methods: {}
+        }
     }
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
-
-</style>

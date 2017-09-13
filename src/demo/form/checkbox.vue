@@ -21,7 +21,7 @@
                 <vCol size="7">
                     <vRow>
                         <vCol>
-                            <vCheckBox v-model="select1" >select1</vCheckBox>
+                            <vCheckBox v-model="select1" >正常</vCheckBox>
                         </vCol>
                     </vRow>
                     <vRow>
@@ -31,12 +31,12 @@
                     </vRow>
                     <vRow>
                         <vCol>
-                            <vCheckBox v-model="select2" :disabled="true">select2</vCheckBox>
+                            <vCheckBox v-model="select2" :disabled="true">禁用状态</vCheckBox>
                         </vCol>
                     </vRow>
                     <vRow>
                         <vCol>
-                            <vCheckBox v-model="select3" :checked="true" :disabled="true">select3</vCheckBox>
+                            <vCheckBox v-model="select3" :checked="true" :disabled="true">选中且禁用状态</vCheckBox>
                         </vCol>
                     </vRow>
 
@@ -151,7 +151,6 @@ export default {
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
     import {vTitle} from '../../elements/main'
-    import {vSelecter} from '../../components/form/main'
     import {vCheckBox, vCheckBoxGroup} from '../../components/form/checkBox/main'
     export default {
         data() {
@@ -172,7 +171,6 @@ export default {
             vCodePanel,
             vRow,
             vCol,
-            vSelecter,
             vCheckBox,
             vCheckBoxGroup
         },

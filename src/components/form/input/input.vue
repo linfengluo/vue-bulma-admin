@@ -24,6 +24,7 @@
                         'is-success': state === 'success',
                         'is-danger': state === 'danger'
                    }"
+                   :name="name"
                    :type="type"
                    :disabled="disabled"
                    :placeholder="placeholder"
@@ -73,10 +74,8 @@
                 type: String,
                 default: 'input element'
             },
-            size: {
-                type: String,
-                default: 'normal'
-            },
+            size: String,
+            name: String,
             width: {
                 type: [String, Number],
                 default: ''
@@ -105,10 +104,7 @@
                 type: Boolean,
                 default: false
             },
-            state: {
-                type: String,
-                default: 'normal'
-            },
+            state: String,
             error: {
                 type: String,
                 default: ''

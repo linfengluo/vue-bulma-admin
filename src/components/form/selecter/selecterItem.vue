@@ -2,7 +2,7 @@
     Created by linfengluo@gmail.com on 2017/9/11.
 -->
 <template>
-    <option :value="value">
+    <option :value="value" :disabled="disabled">
          <span v-if="$slots.default || label">
             <slot></slot>
             <template v-if="!$slots.default">{{label}}</template>
@@ -20,23 +20,12 @@
             label: {
                 type: String,
                 default: 'options'
+            },
+            disabled: {
+                type: Boolean,
+                default: false
             }
-        },
-        data() {
-            return {}
-        },
-        components: {},
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {},
-        methods: {}
+        }
     }
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
-
-</style>

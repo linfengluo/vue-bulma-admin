@@ -1,0 +1,11 @@
+@import "../../../variables/_variables";
+.vb-radio{
+
+    &__groupBtn{
+        display: inline-block;
+        border: 1px solid $border;
+        border-radius: $radius;
+        line-height: 32px;
+        height: 32px;
+    }
+}

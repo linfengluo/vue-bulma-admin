@@ -3,7 +3,7 @@
 -->
 <template>
     <div class="select"
-         :class="{
+         :class="[{
             'is-primary': color === 'primary',
             'is-info': color === 'info',
             'is-success': color === 'success',
@@ -13,15 +13,17 @@
             'is-medium': size === 'medium',
             'is-large': size === 'large',
             'is-loading': state === 'loading'
-         }"
+         }, propClass]"
     >
         <select v-model="selfModel"
                 @change="handlerChange"
                 :placeholder="placeholder"
+                :disabled="disabled"
                 :class="{
                     'is-focused': state === 'focused',
                     'is-hovered': state === 'hovered'
                 }"
+                :style="getStyleWidth(width)"
           >
             <slot></slot>
         </select>
@@ -47,17 +49,21 @@
                 type: String,
                 default: 'normal'
             },
-            multiple: {
-                type: Boolean,
-                default: false
-            },
             icon: {
                 type: String,
                 default: ''
             },
-            placeholder: {
+            disabled: {
+                type: Boolean,
+                default: false
+            },
+            width: {
+                type: [String, Number],
+                default: ''
+            },
+            propClass: {
                 type: String,
-                default: '请选择'
+                default: ''
             }
         },
         data() {
@@ -66,9 +72,19 @@
             }
         },
         created(){
-            if (this.value === ''){
-                this.selfModel = this.$slots.default[0].componentOptions.propsData.value
-                this.$emit('input', this.selfModel)
+            if (this.value === '' && !this.disabled) {
+                let index = 0
+                let option = this.$slots.default[index]
+                while (option) {
+                    index++
+                    if (typeof option.componentOptions === 'undefined' || option.componentOptions.propsData.disabled) {
+                        option = this.$slots.default[index]
+                    } else {
+                        this.selfModel = option.componentOptions.propsData.value
+                        this.$emit('input', this.selfModel)
+                        return true
+                    }
+                }
             }
         },
 
