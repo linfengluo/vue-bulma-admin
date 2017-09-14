@@ -51,6 +51,10 @@ const menu = [
                 {
                     title: 'Radio',
                     link: '/form/radio'
+                },
+                {
+                    title: 'Switch',
+                    link: '/form/switch'
                 }
             ]
         }]

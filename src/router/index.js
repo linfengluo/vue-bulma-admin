@@ -6,6 +6,7 @@ const Input = resolve => require(['../demo/form/input.vue'], resolve)
 const CheckBox = resolve => require(['../demo/form/checkbox.vue'], resolve)
 const Selecter = resolve => require(['../demo/form/selecter.vue'], resolve)
 const Raido = resolve => require(['../demo/form/radio.vue'], resolve)
+const Switch = resolve => require(['../demo/form/switch.vue'], resolve)
 
 Vue.use(Router)
 
@@ -32,6 +33,10 @@ export default new Router({
                     path: '/form/radio',
                     name: 'Raido',
                     component: Raido
+                }, {
+                    path: '/form/switch',
+                    name: 'Switch',
+                    component: Switch
                 }
             ]
         }
