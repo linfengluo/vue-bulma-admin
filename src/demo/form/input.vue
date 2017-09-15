@@ -182,7 +182,7 @@ export default {
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
     import {vTitle, vButton} from '../../elements/main'
-    import {vInput} from '../../components/form/main'
+    import vInput from '../../components/form/input/input.vue'
 
     export default {
         data() {

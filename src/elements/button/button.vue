@@ -4,7 +4,11 @@
 <template>
     <a class="button"
        :class="{
-            'is-white': color === 'white',
+            'is-white': styles === 'white',
+            'is-light': styles === 'light',
+            'is-dark': styles === 'dark',
+            'is-black': styles === 'black',
+            'is-link': styles === 'link',
             'is-primary': state === 'primary',
             'is-info': state === 'info',
             'is-success': state === 'success',
@@ -19,29 +23,34 @@
        }"
        :disabled="disabled"
     >
-        <vIcon name="leftIcon"
+        <vIcon :name="leftIcon"
                v-if="leftIcon !== ''"
                :size="iconSize[size]"
         >
         </vIcon>
-
-        <span>
+        <span v-if="icon === ''">
             <slot></slot>
         </span>
-        <vIcon name="rightIcon"
+        <vIcon :name="icon"
+               v-else
+               :size="iconSize[size]"
+        >
+        </vIcon>
+        <vIcon :name="rightIcon"
                v-if="rightIcon !== ''"
                :size="iconSize[size]"
         >
         </vIcon>
-
     </a>
 </template>
 
 <script>
-    import vIcon from './icon.vue'
+    import vIcon from '../icon.vue'
     export default {
+        name: 'button',
+        componentName: 'button',
         props: {
-            color: {
+            styles: {
                 type: String,
                 default: ''
             },
@@ -57,6 +66,10 @@
                 type: Boolean,
                 default: false
             },
+            linked: {
+                type: Boolean,
+                default: false
+            },
             loading: {
                 type: Boolean,
                 default: false
@@ -64,6 +77,10 @@
             disabled: {
                 type: Boolean,
                 default: false
+            },
+            icon: {
+                type: String,
+                default: ''
             },
             leftIcon: {
                 type: String,
@@ -77,7 +94,6 @@
                 type: String,
                 default: 'normal'
             }
-
         },
         data() {
             return {

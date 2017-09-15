@@ -8,6 +8,8 @@ const Selecter = resolve => require(['../demo/form/selecter.vue'], resolve)
 const Raido = resolve => require(['../demo/form/radio.vue'], resolve)
 const Switch = resolve => require(['../demo/form/switch.vue'], resolve)
 
+const Button = resolve => require(['../demo/elements/button.vue'], resolve)
+
 Vue.use(Router)
 
 export default new Router({
@@ -37,6 +39,10 @@ export default new Router({
                     path: '/form/switch',
                     name: 'Switch',
                     component: Switch
+                }, {
+                    path: '/elements/button',
+                    name: 'Button',
+                    component: Button
                 }
             ]
         }

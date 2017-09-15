@@ -17,7 +17,6 @@
     >
         <select v-model="selfModel"
                 @change="handlerChange"
-                :placeholder="placeholder"
                 :disabled="disabled"
                 :class="{
                     'is-focused': state === 'focused',

@@ -31,6 +31,19 @@ const menu = [
         }]
     },
     {
+        title: 'Elements 元素',
+        icon: 'cube',
+        link: '',
+        childern: [{
+            menu: [
+                {
+                    title: 'Button',
+                    link: '/elements/button'
+                }
+            ]
+        }]
+    },
+    {
         title: 'Form 表单',
         icon: 'check-square-o',
         link: '',
