@@ -14,8 +14,8 @@
            }"
     >
         <slot></slot>
-        <vTableHeader :columns="columns" :checkable="checkable" @changeSelectedAll="toggleSelectAll"></vTableHeader>
-        <vTableBody :columns="columns" :tableData="tableData" :checkable="checkable" :rowKey="rowKey"></vTableBody>
+        <vTableHeader :columns="columns" @changeSelectedAll="toggleSelectAll"></vTableHeader>
+        <vTableBody :columns="columns" :tableData="tableData"></vTableBody>
     </table>
 </template>
 
@@ -32,6 +32,10 @@
                 default(){
                     return []
                 }
+            },
+            clickable: {
+                type: Boolean,
+                default: false
             },
             checkable: {
                 type: Boolean,
@@ -51,6 +55,10 @@
                 default: true
             },
             narrow: {
+                type: Boolean,
+                default: false
+            },
+            showIndex: {
                 type: Boolean,
                 default: false
             }
@@ -135,6 +143,12 @@
                 if (index > -1) {
                     this.selectedKeys.splice(index, 1)
                     this.selectedData.splice(index, 1)
+                }
+            },
+
+            handlerClickEvent(key, data){
+                if (this.clickable){
+                    this.$emit('headlerClick', key, data)
                 }
             }
         }

@@ -3,10 +3,13 @@
 -->
 <template>
     <thead>
-        <th class="checkbox__wrapper">
+        <th class="checkbox__wrapper" v-if="checkable">
             <div class="temp">
                 <vCheckbox v-if="checkable" v-model="isChecked" @change="handleToggleSelectAll"></vCheckbox>
             </div>
+        </th>
+        <th v-if="showIndex" width="50">
+            <div></div>
         </th>
         <th v-for="(column, index) in columns" :key="index">
             <span>{{column.label}}</span>
@@ -29,10 +32,6 @@
             value: {
                 type: Boolean,
                 default: false
-            },
-            checkable: {
-                type: Boolean,
-                default: false
             }
         },
         data() {
@@ -53,6 +52,14 @@
         computed: {
             isSelectedAll(){
                 return this.$parent.isSelectAll
+            },
+
+            showIndex(){
+                return this.$parent.showIndex
+            },
+
+            checkable(){
+                return this.$parent.checkable
             }
         },
         methods: {

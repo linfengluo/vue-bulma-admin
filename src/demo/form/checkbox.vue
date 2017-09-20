@@ -173,18 +173,7 @@ export default {
             vCol,
             vCheckBox,
             vCheckBoxGroup
-        },
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {},
-        methods: {}
+        }
     }
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
-
-</style>
