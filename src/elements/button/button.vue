@@ -21,6 +21,7 @@
             'is-medium': size === 'medium',
             'is-large': size === 'large',
        }"
+       @click="handleClick"
        :disabled="disabled"
     >
         <vIcon :name="leftIcon"
@@ -115,7 +116,11 @@
         },
         watch: {},
         computed: {},
-        methods: {}
+        methods: {
+            handleClick(event){
+                this.$emit('click', event)
+            }
+        }
     }
 </script>
 

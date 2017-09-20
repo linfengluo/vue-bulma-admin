@@ -188,6 +188,52 @@ export default {
             </template>
         </vCodePanel>
 
+        <vRow>
+            <vCol>
+                <vTitle level="4" :isMargin="true">diy 自定义</vTitle>
+            </vCol>
+        </vRow>
+        <vCodePanel>
+            <vRow>
+                <vCol>
+                    <vTable :tableData="tableData">
+                        <vTableCol label="姓名" prop='name' width="200"></vTableCol>
+                        <vTableCol label="时间" prop='date' ></vTableCol>
+                        <vTableCol label="地址" prop='address'></vTableCol>
+                        <vTableCol label="操作">
+                            <template scope="row">
+                                <vButton state="info" @click="showItem(row)">选择</vButton>
+                            </template>
+                        </vTableCol>
+                    </vTable>
+                </vCol>
+            </vRow>
+            <vRow>
+                <vCol>
+                    seelctedData: {{showItemData}}
+                </vCol>
+            </vRow>
+            <vRow>
+                <vCol>
+                    通过 template 自定义模板，通过scope 获取行数据
+                </vCol>
+            </vRow>
+            <template slot="code" >
+                <code class="html">
+&lt;vTable :tableData="tableData"&gt;
+    &lt;vTableCol label="姓名" prop='name' width="200"&gt;&lt;/vTableCol&gt;
+    &lt;vTableCol label="时间" prop='date' &gt;&lt;/vTableCol&gt;
+    &lt;vTableCol label="地址" prop='address'&gt;&lt;/vTableCol&gt;
+    &lt;vTableCol label="操作"&gt;
+        &lt;template scope="row"&gt;
+            &lt;vButton state="info" @click="showItem(row)"&gt;选择&lt;/vButton&gt;
+        &lt;/template&gt;
+    &lt;/vTableCol&gt;
+&lt;/vTable&gt;
+                </code>
+            </template>
+        </vCodePanel>
+
     </vContent>
 </template>
 
@@ -229,7 +275,8 @@ export default {
                 showIndex: false,
                 checkable: false,
                 clickKey: '',
-                selectedKeys: []
+                selectedKeys: [],
+                showItemData: {}
             }
         },
         components: {
@@ -261,6 +308,10 @@ export default {
 
             headlerSelect(keys, datas){
                 this.selectedKeys = keys
+            },
+
+            showItem(data){
+                this.showItemData = data
             }
         }
     }
