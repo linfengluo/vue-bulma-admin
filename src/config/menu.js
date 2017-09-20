@@ -71,6 +71,19 @@ const menu = [
                 }
             ]
         }]
+    },
+    {
+        title: 'Data 数据',
+        icon: 'database',
+        link: '',
+        childern: [{
+            menu: [
+                {
+                    title: 'Table',
+                    link: '/data/table'
+                }
+            ]
+        }]
     }
 ]
 

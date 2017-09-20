@@ -10,6 +10,8 @@ const Switch = resolve => require(['../demo/form/switch.vue'], resolve)
 
 const Button = resolve => require(['../demo/elements/button.vue'], resolve)
 
+const Table = resolve => require(['../demo/data/table.vue'], resolve)
+
 Vue.use(Router)
 
 export default new Router({
@@ -43,6 +45,10 @@ export default new Router({
                     path: '/elements/button',
                     name: 'Button',
                     component: Button
+                }, {
+                    path: '/data/table',
+                    name: 'Table',
+                    component: Table
                 }
             ]
         }

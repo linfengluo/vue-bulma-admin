@@ -80,6 +80,13 @@
                 }
             }
         },
+        watch: {
+            value(val){
+                if (!this.isGroup) {
+                    this.selfValue = val
+                }
+            }
+        },
         methods: {
             // 初始化selected
             initSelected(){

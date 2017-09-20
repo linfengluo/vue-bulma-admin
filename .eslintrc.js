@@ -27,5 +27,6 @@ module.exports = {
         "indent": [2, 4],//缩进风格
         "space-before-function-paren": [0, "always"],//函数定义时括号前面要不要有空格
         "space-before-blocks": [0, "always"],//不以新行开始的块{前面要不要有空格
+
     }
 }
