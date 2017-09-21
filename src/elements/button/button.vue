@@ -3,24 +3,7 @@
 -->
 <template>
     <a class="button"
-       :class="{
-            'is-white': styles === 'white',
-            'is-light': styles === 'light',
-            'is-dark': styles === 'dark',
-            'is-black': styles === 'black',
-            'is-link': styles === 'link',
-            'is-primary': state === 'primary',
-            'is-info': state === 'info',
-            'is-success': state === 'success',
-            'is-warning': state === 'warning',
-            'is-danger': state === 'danger',
-            'is-outlined': outlined,
-            'is-inverted': inverted,
-            'is-loading': loading,
-            'is-small': size === 'small',
-            'is-medium': size === 'medium',
-            'is-large': size === 'large',
-       }"
+       :class="[styleClass, sizeClass, stateClass]"
        @click="handleClick"
        :disabled="disabled"
     >
@@ -44,21 +27,14 @@
         </vIcon>
     </a>
 </template>
-
 <script>
     import vIcon from '../icon.vue'
     export default {
         name: 'button',
         componentName: 'button',
         props: {
-            styles: {
-                type: String,
-                default: ''
-            },
-            state: {
-                type: String,
-                default: ''
-            },
+            styles: String,
+            state: String,
             outlined: {
                 type: Boolean,
                 default: false
@@ -109,13 +85,19 @@
         components: {
             vIcon
         },
-        mixins: [],
-        created(){
+        computed: {
+            sizeClass(){
+                return this.size === 'normal' ? null : `is-${this.size}`
+            },
+
+            stateClass(){
+                return this.state ? `is-${this.state}` : null
+            },
+
+            styleClass(){
+                return this.styles ? `is-${this.state}` : null
+            }
         },
-        mounted(){
-        },
-        watch: {},
-        computed: {},
         methods: {
             handleClick(event){
                 this.$emit('click', event)
@@ -123,7 +105,3 @@
         }
     }
 </script>
-
-<style lang="scss" rel="stylesheet/scss" scoped>
-
-</style>

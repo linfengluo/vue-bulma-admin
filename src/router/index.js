@@ -12,6 +12,8 @@ const Button = resolve => require(['../demo/elements/button.vue'], resolve)
 
 const Table = resolve => require(['../demo/data/table.vue'], resolve)
 
+const Notify = resolve => require(['../demo/notice/notify.vue'], resolve)
+
 Vue.use(Router)
 
 export default new Router({
@@ -49,6 +51,11 @@ export default new Router({
                     path: '/data/table',
                     name: 'Table',
                     component: Table
+                },
+                {
+                    path: '/notice/notify',
+                    name: 'Notify',
+                    component: Notify
                 }
             ]
         }

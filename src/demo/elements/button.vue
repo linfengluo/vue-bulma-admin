@@ -316,11 +316,11 @@
 <script>
     import vContent from '../../components/layout/content/content.vue'
     import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/main'
+    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
     import {vTitle} from '../../elements/main'
-    import {vButton, vButtonGroup} from '../../elements/button/main'
+    import {vButton, vButtonGroup} from '../../elements/button/index'
     export default {
         data() {
             return {

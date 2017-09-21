@@ -84,6 +84,19 @@ const menu = [
                 }
             ]
         }]
+    },
+    {
+        title: 'notice 提醒',
+        icon: 'bell-o',
+        link: '',
+        childern: [{
+            menu: [
+                {
+                    title: 'Notify',
+                    link: '/notice/notify'
+                }
+            ]
+        }]
     }
 ]
 

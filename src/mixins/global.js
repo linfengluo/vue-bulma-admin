@@ -3,9 +3,18 @@
  */
 
 const globalMixins = {
+    data(){
+        return {
+            notificationList: []
+        }
+    },
     methods: {
         getStyleWidth(width){
             return width === 0 || width === '' ? '' : `width: ${width}px;`
+        },
+
+        notify(message){
+            this.notificationList.push(message)
         }
     }
 }

@@ -12,3 +12,10 @@ html, body, .app {
 .collapse-transition {
     transition: .3s height ease-in-out, .3s padding-top ease-in-out, .3s padding-bottom ease-in-out
 }
+
+.notifications{
+    position: fixed;
+    right: $space;
+    width: 330px;
+    top: $header-height + $space;
+}

@@ -10,8 +10,11 @@ import globalMixins from './mixins/global'
 import VueHighlightJS from 'vue-highlightjs'
 import 'highlightjs/styles/github-gist.css'
 
+import Notification from './components/notify'
+
 Vue.mixin(globalMixins)
 Vue.use(VueHighlightJS)
+Vue.prototype.$notify = Notification
 
 Vue.config.productionTip = false
 

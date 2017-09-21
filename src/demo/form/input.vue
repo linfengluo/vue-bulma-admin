@@ -178,7 +178,7 @@ export default {
 <script>
     import vContent from '../../components/layout/content/content.vue'
     import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/main'
+    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
     import {vTitle, vButton} from '../../elements/main'
