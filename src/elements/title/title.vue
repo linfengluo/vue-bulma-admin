@@ -34,7 +34,7 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../sass/variables/variables";
+    @import "../../sass/variables/_variables";
     .vb-header{
         .title{
             height: $header-height;

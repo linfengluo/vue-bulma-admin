@@ -92,8 +92,16 @@ const menu = [
         childern: [{
             menu: [
                 {
+                    title: 'Alert',
+                    link: '/notice/alert'
+                },
+                {
                     title: 'Notify',
                     link: '/notice/notify'
+                },
+                {
+                    title: 'Message',
+                    link: '/notice/message'
                 }
             ]
         }]

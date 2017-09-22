@@ -18,7 +18,7 @@
 <script>
     import vheader from '../components/layout/header/header.vue'
     import vNavMenu from '../components/layout/navMenu/navMenu.vue'
-    import vIcon from '../elements/icon.vue'
+    import vIcon from '../elements/icon/icon.vue'
 
     import menuConfig from '../config/menu'
 

@@ -74,7 +74,9 @@ export default {
                     <vRow>
                         <vCol>
                             <vButton @click="openNotice4">default</vButton>
+                            <vButton @click="openNotice13" state="light">light</vButton>
                             <vButton @click="openNotice5" state="info">info</vButton>
+                            <vButton @click="openNotice14" state="primary">primary</vButton>
                             <vButton @click="openNotice6" state="warning">warning</vButton>
                             <vButton @click="openNotice7" state="success">success</vButton>
                             <vButton @click="openNotice8" state="danger">danger</vButton>
@@ -85,7 +87,9 @@ export default {
             <template slot="code" >
                 <code class="html">
 &lt;vButton @click="openNotice4"&gt;default&lt;/vButton&gt;
+&lt;vButton @click="openNotice13" state="light"&gt;light&lt;/vButton&gt;
 &lt;vButton @click="openNotice5" state="info"&gt;info&lt;/vButton&gt;
+&lt;vButton @click="openNotice14" state="primary"&gt;primary&lt;/vButton&gt;
 &lt;vButton @click="openNotice6" state="warning"&gt;warning&lt;/vButton&gt;
 &lt;vButton @click="openNotice7" state="success"&gt;success&lt;/vButton&gt;
 &lt;vButton @click="openNotice8" state="danger"&gt;danger&lt;/vButton&gt;
@@ -118,6 +122,20 @@ methods: {
     openNotice8(){
         this.$notify.danger({
             title: 'danger提示',
+            message: '这是一条提示信息'
+        })
+    },
+
+    openNotice13(){
+        this.$notify.light({
+            title: 'light 提示',
+            message: '这是一条提示信息'
+        })
+    },
+
+    openNotice14(){
+        this.$notify.primary({
+            title: 'primary 提示',
             message: '这是一条提示信息'
         })
     }
@@ -255,6 +273,20 @@ methods: {
             openNotice8(){
                 this.$notify.danger({
                     title: 'danger提示',
+                    message: '这是一条提示信息'
+                })
+            },
+
+            openNotice13(){
+                this.$notify.light({
+                    title: 'light 提示',
+                    message: '这是一条提示信息'
+                })
+            },
+
+            openNotice14(){
+                this.$notify.primary({
+                    title: 'primary 提示',
                     message: '这是一条提示信息'
                 })
             },

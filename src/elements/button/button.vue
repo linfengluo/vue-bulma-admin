@@ -28,7 +28,7 @@
     </a>
 </template>
 <script>
-    import vIcon from '../icon.vue'
+    import vIcon from '../icon/icon.vue'
     export default {
         name: 'button',
         componentName: 'button',

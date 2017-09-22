@@ -11,10 +11,12 @@ import VueHighlightJS from 'vue-highlightjs'
 import 'highlightjs/styles/github-gist.css'
 
 import Notification from './components/notify'
+import Message from './components/message'
 
 Vue.mixin(globalMixins)
 Vue.use(VueHighlightJS)
 Vue.prototype.$notify = Notification
+Vue.prototype.$message = Message
 
 Vue.config.productionTip = false
 

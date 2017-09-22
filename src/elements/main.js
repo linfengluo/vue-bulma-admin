@@ -3,9 +3,9 @@
  */
 
 import vBox from './box.vue'
-import vIcon from './icon.vue'
+import vIcon from './icon/icon.vue'
 import vButton from './button/button.vue'
-import vTitle from './title.vue'
+import vTitle from './title/title.vue'
 
 export {
     vBox,

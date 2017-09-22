@@ -58,7 +58,7 @@
 </template>
 
 <script>
-    import vIcon from '../../../elements/icon.vue'
+    import vIcon from '../../../elements/icon/icon.vue'
 
     export default {
         props: {
@@ -163,7 +163,6 @@
                 this.setValue(value)
                 this.$emit('change', value)
             }
-
         }
     }
 </script>

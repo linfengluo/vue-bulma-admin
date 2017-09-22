@@ -1,0 +1,46 @@
+.message{
+
+    &-body {
+        position: relative;
+    }
+
+    .is-noneTitle{
+        display: flex;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        &.noneBorder{
+            border: none;
+        }
+
+        .message-body{
+
+            &-content{
+                flex: 1;
+            }
+
+            &-icon, &-btn{
+                flex: 0 0 25px;
+            }
+            &-btn{
+                text-align: right;
+            }
+
+            &-title{
+                font-size: 1.2em;
+                line-height: 2em;
+            }
+        }
+    }
+
+    &-title{
+        &-text{
+            display: inline-block;
+            height: 21px;
+            line-height: 21px;
+            vertical-align: middle;
+        }
+    }
+
+}

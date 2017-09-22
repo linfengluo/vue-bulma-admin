@@ -1,40 +1,41 @@
 /**
  * Created by linfengluo@gmail.com on 2017/9/21.
  */
-import Vue from 'vue'
-import Notify from './notify.vue'
 
-function initNotify(propsData) {
-    const NotifyComponent = Vue.extend(Notify)
-    return new NotifyComponent({
+import Vue from 'vue'
+import Message from './message.vue'
+
+function initMessage(propsData) {
+    const MessageComponent = Vue.extend(Message)
+    return new MessageComponent({
         el: document.createElement('div'),
         propsData
     })
 }
 
-const Notification = {}
+const MessageManger = {}
 
 const typeArray = [
     'open',
     'primary',
     'success',
     'warning',
-    'info',
     'light',
+    'info',
     'danger'
 ]
 
 typeArray.forEach(type => {
-    Notification[type] = params => {
-        type = type === 'open' ? 'dark' : type
+    MessageManger[type] = params => {
+        type = type === 'open' ? '' : type
 
         const defaultParam = {
             duration: 4500,
             type: type
         }
         const propsData = Object.assign(defaultParam, params)
-        return initNotify(propsData)
+        return initMessage(propsData)
     }
 })
 
-export default Notification
+export default MessageManger

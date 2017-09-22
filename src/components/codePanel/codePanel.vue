@@ -21,7 +21,7 @@
 </template>
 
 <script>
-    import vIcon from '../../elements/icon.vue'
+    import vIcon from '../../elements/icon/icon.vue'
     export default {
         data(){
             return {

@@ -25,7 +25,7 @@
 </template>
 
 <script>
-    import vIcon from '../../../elements/icon.vue'
+    import vIcon from '../../../elements/icon/icon.vue'
     import MenuMixins from './menu'
 
     export default {
