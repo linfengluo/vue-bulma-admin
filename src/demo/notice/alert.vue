@@ -106,7 +106,7 @@
     import vContentHeader from '../../components/layout/content/header.vue'
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-    import {vTitle} from '../../elements/main'
+    import vTitle from '../../components/title'
     import {vRow, vCol} from '../../components/layout/columns/main'
     import Alert from '../../components/alert'
     export default {

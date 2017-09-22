@@ -150,8 +150,8 @@ export default {
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import {vTitle} from '../../elements/main'
-    import {vCheckBox, vCheckBoxGroup} from '../../components/form/checkBox/main'
+    import vTitle from '../../components/title'
+    import {vCheckBox, vCheckBoxGroup} from '../../components/checkBox/index'
     export default {
         data() {
             return {

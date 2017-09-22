@@ -132,5 +132,69 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-@import "../../../sass/components/form/_checkbox";
+    @import "../../sass/variables/variables";
+    .vb-checkbox{
+        padding-left: 20px;
+        min-height: 16px;
+        user-select: none;
+
+        &__group{
+            .vb-checkbox{
+                &:not(:last-child){
+                    margin-right: $space * 2;
+                }
+            }
+
+        }
+
+        input[type="checkbox"]{
+            cursor: pointer;
+            opacity: 0;
+            left: -9999px;
+            outline: none!important;
+            position: absolute;
+        }
+        &:before{
+            background-color: #ffffff;
+            border-radius: $radius;
+            border: 1px solid gainsboro;
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 0px;
+            position: absolute;
+            transition: 0.1s ease-in-out;
+            outline: none !important;
+        }
+        &.checked:after{
+            font: normal normal normal 14px/1 FontAwesome;
+            content: "\f00c";
+            color: #7a7d84;
+            display: inline-block;
+            font-size: 11px;
+            height: 16px;
+            left: 0;
+            padding-left: 2px;
+            position: absolute;
+            top: 2px;
+            width: 16px;
+            transition: 0.1s ease-in-out;
+            -o-transition: 0.1s ease-in-out;
+            -webkit-transition: 0.1s ease-in-out;
+        }
+        &.checked:before{
+            background-color: $primary;
+            border-color: $primary;
+        }
+        &.checked.disabled:before{
+            background-color: $grey-light;
+            border-color: $grey-light;
+        }
+        &.checked:after{
+            color: #fff;
+        }
+
+    }
 </style>

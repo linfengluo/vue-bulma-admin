@@ -46,5 +46,16 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-@import "../../../sass/components/form/raido/radioGroup";
+    @import "../../sass/variables/variables";
+    .vb-radio{
+
+        &__groupBtn{
+            display: inline-block;
+            border: 1px solid $border;
+            border-radius: $radius;
+            line-height: 32px;
+            height: 32px;
+        }
+    }
+
 </style>

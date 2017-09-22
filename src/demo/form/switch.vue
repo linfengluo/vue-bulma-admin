@@ -144,8 +144,8 @@ export default {
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import {vTitle} from '../../elements/main'
-    import vSwitch from '../../components/form/switch/switch.vue'
+    import vTitle from '../../components/title'
+    import vSwitch from '../../components/switch/switch.vue'
     export default {
         data() {
             return {

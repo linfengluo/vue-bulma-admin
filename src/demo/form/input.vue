@@ -181,8 +181,9 @@ export default {
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import {vTitle, vButton} from '../../elements/main'
-    import vInput from '../../components/form/input/input.vue'
+    import vTitle from '../../components/title'
+    import {vButton} from '../../components/button'
+    import vInput from '../../components/input/input.vue'
 
     export default {
         data() {

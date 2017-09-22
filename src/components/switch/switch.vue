@@ -124,7 +124,7 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../../sass/variables/variables";
+    @import "../../sass/variables/variables";
 .vb-switch{
     display: inline-block;
     position: relative;

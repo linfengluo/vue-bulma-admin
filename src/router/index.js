@@ -7,6 +7,7 @@ const CheckBox = resolve => require(['../demo/form/checkbox.vue'], resolve)
 const Selecter = resolve => require(['../demo/form/selecter.vue'], resolve)
 const Raido = resolve => require(['../demo/form/radio.vue'], resolve)
 const Switch = resolve => require(['../demo/form/switch.vue'], resolve)
+const Form = resolve => require(['../demo/form/form.vue'], resolve)
 
 const Button = resolve => require(['../demo/elements/button.vue'], resolve)
 
@@ -46,6 +47,10 @@ export default new Router({
                     name: 'Switch',
                     component: Switch
                 }, {
+                    path: '/form/form',
+                    name: 'Form',
+                    component: Form
+                }, {
                     path: '/elements/button',
                     name: 'Button',
                     component: Button
@@ -53,18 +58,15 @@ export default new Router({
                     path: '/data/table',
                     name: 'Table',
                     component: Table
-                },
-                {
+                }, {
                     path: '/notice/notify',
                     name: 'Notify',
                     component: Notify
-                },
-                {
+                }, {
                     path: '/notice/message',
                     name: 'Message',
                     component: Message
-                },
-                {
+                }, {
                     path: '/notice/alert',
                     name: 'Alert',
                     component: Alert

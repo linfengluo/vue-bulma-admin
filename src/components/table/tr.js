@@ -2,7 +2,7 @@
  * Created by linfengluo@gmail.com on 2017/9/18.
  */
 
-import vCheckbox from '../form/checkBox/checkbox.vue'
+import vCheckbox from '../checkBox/checkbox.vue'
 
 export default {
     name: 'tableTr',

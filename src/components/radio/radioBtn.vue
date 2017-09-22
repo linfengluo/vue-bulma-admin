@@ -82,5 +82,48 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../../sass/components/form/raido/radioBtn";
+    @import "../../sass/variables/variables";
+
+    .vb-radio{
+
+        &__btn{
+            display: inline;
+            padding: $space $space * 2;
+            margin: 0;
+
+
+
+            &:not(:last-child){
+                border-right: 1px solid $border;
+            }
+
+            &:hover{
+                color: $primary;
+            }
+
+            input[type="radio"]{
+                cursor: pointer;
+                opacity: 0;
+                left: -9999px;
+                outline: none!important;
+                position: absolute;
+            }
+
+            &.checked{
+                background-color: $primary;
+                color: $white;
+            }
+
+            &.disabled{
+                &:hover{
+                    color: inherit;
+                }
+            }
+
+            &.checked.disabled:after{
+                border-color: $grey-light;
+            }
+        }
+    }
+
 </style>

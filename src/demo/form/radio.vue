@@ -179,8 +179,8 @@ export default {
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import {vTitle} from '../../elements/main'
-    import {vRadio, vRadioGroup, vRadioBtn} from '../../components/form/radio/main'
+    import vTitle from '../../components/title'
+    import {vRadio, vRadioGroup, vRadioBtn} from '../../components/radio/index'
     export default {
         data() {
             return {

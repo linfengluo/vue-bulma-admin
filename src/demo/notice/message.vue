@@ -284,8 +284,8 @@ methods: {
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import {vTitle} from '../../elements/main'
-    import {vButton} from '../../elements/button/index'
+    import vTitle from '../../components/title'
+    import {vButton} from '../../components/button'
     export default {
         components: {
             vContent,

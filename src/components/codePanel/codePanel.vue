@@ -21,7 +21,7 @@
 </template>
 
 <script>
-    import vIcon from '../../elements/icon/icon.vue'
+    import vIcon from '../icon/icon.vue'
     export default {
         data(){
             return {
@@ -54,6 +54,41 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../sass/components/codepanel";
+    @import "../../sass/variables/variables";
+
+    .hljs{
+        background: inherit;
+        padding: 0 $space * 4;
+    }
+
+    .vb-codePanel{
+        border: 1px solid $border;
+        border-radius: $radius;
+        max-width: 900px;
+
+
+        &__toggle{
+            padding: $space ;
+            border-top: 1px solid $border;
+            text-align: center;
+            cursor: pointer;
+
+            .icon{
+                vertical-align: bottom;
+            }
+        }
+
+        &__demo{
+            padding: $space * 4;
+        }
+
+        &__code{
+            margin: 0;
+            transition: all .3s ease-in-out;
+            text-align: left;
+            overflow: hidden;
+        }
+    }
+
 
 </style>

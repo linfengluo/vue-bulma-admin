@@ -243,9 +243,10 @@ export default {
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import {vTitle, vButton} from '../../elements/main'
+    import vTitle from '../../components/title'
+    import {vButton} from '../../components/button'
     import {vTable, vTableCol} from '../../components/table/index'
-    import vSwitch from '../../components/form/switch/switch.vue'
+    import vSwitch from '../../components/switch/switch.vue'
 
     export default {
         data() {

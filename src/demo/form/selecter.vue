@@ -315,8 +315,8 @@ export default {
     import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
-    import {vTitle} from '../../elements/main'
-    import {vSelectGroup, vSelectItem} from '../../components/form/selecter/main'
+    import vTitle from '../../components/title'
+    import {vSelectGroup, vSelectItem} from '../../components/selecter/index'
     export default {
         data() {
             return {

@@ -68,6 +68,10 @@ const menu = [
                 {
                     title: 'Switch',
                     link: '/form/switch'
+                },
+                {
+                    title: 'Form',
+                    link: '/form/form'
                 }
             ]
         }]
