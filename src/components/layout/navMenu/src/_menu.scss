@@ -1,4 +1,4 @@
-@import "../../../sass/variables/variables";
+@import "../../../../sass/variables/_variables";
 .vb-menu{
     position: fixed;
     left: 0;
@@ -27,6 +27,7 @@
         line-height: $menu-item-height;
         cursor: pointer;
         border-radius: $radius;
+        transition: all .3s;
 
         &:hover{
             background-color: $menu-item-background-hover;
@@ -41,6 +42,7 @@
             flex: 1;
             padding: 0 $space * 2;
             border-radius: $radius;
+            transition: all .3s;
         }
     }
 

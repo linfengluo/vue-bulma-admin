@@ -3,21 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'font-awesome/css/font-awesome.css'
-import 'bulma'
 
-import globalMixins from './mixins/global'
-import VueHighlightJS from 'vue-highlightjs'
-import 'highlightjs/styles/github-gist.css'
-
-import Notification from './components/notify'
-import Message from './components/message'
-
-Vue.mixin(globalMixins)
-Vue.use(VueHighlightJS)
-Vue.prototype.$notify = Notification
-Vue.prototype.$message = Message
-
+import VBulma from './components'
+Vue.use(VBulma)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

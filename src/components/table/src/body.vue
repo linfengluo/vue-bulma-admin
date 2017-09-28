@@ -13,8 +13,8 @@
     import vTr from './tr'
 
     export default {
-        name: 'tableBody',
-        componentName: 'tableBody',
+        name: 'vb-tableBody',
+        componentName: 'vb-tableBody',
         props: {
             columns: {
                 type: Array,

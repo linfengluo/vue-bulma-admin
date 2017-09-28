@@ -9,7 +9,8 @@
 
 <script>
     export default {
-        componentName: 'checkboxGroup',
+        name: 'vb-checkboxGroup',
+        componentName: 'vb-checkboxGroup',
         props: {
             value: {
                 type: Array,

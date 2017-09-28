@@ -12,6 +12,8 @@
 
 <script>
     export default {
+        name: 'vb-breadcrumb',
+        componentName: 'vb-breadcrumb',
         props: {
             link: {
                 type: String,

@@ -21,12 +21,12 @@
 </template>
 
 <script>
-    import vMenuMixins from './menu'
-    import vIcon from '../../icon/src/icon.vue'
+    import vMenuMixins from './mixins'
+    import vIcon from '../../../icon/src/icon.vue'
 
     export default {
-        name: 'vNavMenuItem',
-        componentName: 'vNavMenuItem',
+        name: 'vb-navmenuItem',
+        componentName: 'vb-navmenuItem',
         props: {
             link: {
                 type: String,

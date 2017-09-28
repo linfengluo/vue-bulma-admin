@@ -9,6 +9,8 @@
 
 <script>
     export default {
+        name: 'vb-breadcrumbGroup',
+        componentName: 'vb-breadcrumbGroup',
         props: {
             separator: {
                 type: String,

@@ -2,45 +2,45 @@
     Created by linfengluo@gmail.com on 2017/9/14.
 -->
 <template>
-    <vContent>
-        <vContentHeader>
-            <vTitle level="3">radio</vTitle>
-            <vBreadcrumb slot="right">
-                <vBreadcrumbItem>Form</vBreadcrumbItem>
-                <vBreadcrumbItem>Radio</vBreadcrumbItem>
-            </vBreadcrumb>
-        </vContentHeader>
+    <vb-content>
+        <vb-contentHeader>
+            <vb-title level="3">radio</vb-title>
+            <vb-breadcrumbGroup slot="right">
+                <vb-breadcrumb>Form</vb-breadcrumb>
+                <vb-breadcrumb>Radio</vb-breadcrumb>
+            </vb-breadcrumbGroup>
+        </vb-contentHeader>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">基本使用</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">基本使用</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vRow>
-                        <vCol>
-                            <vSwitch v-model="selected" width="100"></vSwitch>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSwitch v-model="selected1" :disabled="true"></vSwitch>
-                        </vCol>
-                    </vRow>
-                </vCol>
-                <vCol >
+            <vb-row>
+                <vb-col size="7">
+                    <vb-row>
+                        <vb-col>
+                            <vb-switch v-model="selected" width="100"></vb-switch>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-switch v-model="selected1" :disabled="true"></vb-switch>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+                <vb-col >
                     通过 disabled 属性指定是否禁用 switch 组件
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vSwitch v-model="selected"&gt;&lt;/vSwitch&gt;
-&lt;vSwitch v-model="selected1" :disabled="true"&gt;&lt;/vSwitch&gt;
+&lt;vb-switch v-model="selected"&gt;&lt;/vb-switch&gt;
+&lt;vb-switch v-model="selected1" :disabled="true"&gt;&lt;/vb-switch&gt;
                 </code><code class="javascript">
 &lt;script&gt;
-import vSwitch from '../../components/form/switch/switch.vue'
+import vb-switch from '../../components/form/switch/switch.vue'
 export default {
     data() {
         return {
@@ -48,7 +48,7 @@ export default {
         }
     },
     components: {
-        vSwitch
+        vb-switch
     }
 }
 
@@ -57,68 +57,68 @@ export default {
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">Color 颜色</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">Color 颜色</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vRow>
-                        <vCol>
-                            <vSwitch v-model="selected5" offColor="red" onColor="#3273DC"></vSwitch>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSwitch v-model="selected4" onColor="#FFDD57"></vSwitch>
-                        </vCol>
-                    </vRow>
-                </vCol>
-                <vCol >
+            <vb-row>
+                <vb-col size="7">
+                    <vb-row>
+                        <vb-col>
+                            <vb-switch v-model="selected5" offColor="red" onColor="#3273DC"></vb-switch>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-switch v-model="selected4" onColor="#FFDD57"></vb-switch>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+                <vb-col >
                     <p>通过 onColor 和 offColor 属性设置开关颜色</p>
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vSwitch v-model="selected5" offColor="red" onColor="#3273DC"&gt;&lt;/vSwitch&gt;
-&lt;vSwitch v-model="selected4" onColor="#FFDD57"&gt;&lt;/vSwitch&gt;
+&lt;vb-switch v-model="selected5" offColor="red" onColor="#3273DC"&gt;&lt;/vb-switch&gt;
+&lt;vb-switch v-model="selected4" onColor="#FFDD57"&gt;&lt;/vb-switch&gt;
                 </code>
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">扩展</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">扩展</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vRow>
-                        <vCol>
-                            <vSwitch v-model="selected2" onText="On" offText="Off"></vSwitch>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSwitch v-model="selected3" onText="On" offText="Off" onValue="1" offValue="0"></vSwitch>
-                        </vCol>
-                    </vRow>
-                </vCol>
-                <vCol >
+            <vb-row>
+                <vb-col size="7">
+                    <vb-row>
+                        <vb-col>
+                            <vb-switch v-model="selected2" onText="On" offText="Off"></vb-switch>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-switch v-model="selected3" onText="On" offText="Off" onValue="1" offValue="0"></vb-switch>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+                <vb-col >
                     通过 onText, offText 属性设置开关的文字描述
                     <p>设置 onValue 和 offValue 属性，接受Boolean, String或Number类型的值</p>
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vSwitch v-model="selected" onText="On" offText="Off"&gt;&lt;/vSwitch&gt;
-&lt;vSwitch v-model="selected1" :disabled="true" onText="On" offText="Off" onValue="1" offValue="0"&gt;&lt;/vSwitch&gt;
+&lt;vb-switch v-model="selected" onText="On" offText="Off"&gt;&lt;/vb-switch&gt;
+&lt;vb-switch v-model="selected1" :disabled="true" onText="On" offText="Off" onValue="1" offValue="0"&gt;&lt;/vb-switch&gt;
                 </code><code class="javascript">
 &lt;script&gt;
-import vSwitch from '../../components/form/switch/switch.vue'
+import vb-switch from '../../components/form/switch/switch.vue'
 export default {
     data() {
         return {
@@ -127,25 +127,19 @@ export default {
         }
     },
     components: {
-        vSwitch
+        vb-switch
     }
 }
 &lt;/script&gt;
             </code>
             </template>
         </vCodePanel>
-    </vContent>
+    </vb-content>
 
 </template>
 
 <script>
-    import vContent from '../../components/layout/content/content.vue'
-    import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-    import {vRow, vCol} from '../../components/layout/columns/main'
-    import vTitle from '../../components/title'
-    import vSwitch from '../../components/switch/src/switch.vue'
     export default {
         data() {
             return {
@@ -158,15 +152,7 @@ export default {
             }
         },
         components: {
-            vContent,
-            vTitle,
-            vContentHeader,
-            vBreadcrumb,
-            vBreadcrumbItem,
-            vCodePanel,
-            vRow,
-            vCol,
-            vSwitch
+            vCodePanel
         }
     }
 </script>

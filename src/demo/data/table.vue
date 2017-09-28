@@ -2,45 +2,45 @@
     Created by linfengluo@gmail.com on 2017/9/18.
 -->
 <template>
-    <vContent>
-        <vContentHeader>
-            <vTitle level="3">table</vTitle>
-            <vBreadcrumb slot="right">
-                <vBreadcrumbItem>data</vBreadcrumbItem>
-                <vBreadcrumbItem>Table</vBreadcrumbItem>
-            </vBreadcrumb>
-        </vContentHeader>
+    <vb-content>
+        <vb-contentHeader>
+            <vb-title level="3">table</vb-title>
+            <vb-breadcrumbGroup slot="right">
+                <vb-breadcrumb>data</vb-breadcrumb>
+                <vb-breadcrumb>Table</vb-breadcrumb>
+            </vb-breadcrumbGroup>
+        </vb-contentHeader>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">基本用法</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">基本用法</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    <vTable :tableData="tableData">
-                        <vTableCol label="姓名" prop='name' width="200"></vTableCol>
-                        <vTableCol label="时间" prop='date' ></vTableCol>
-                        <vTableCol label="地址" prop='address'></vTableCol>
-                    </vTable>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol>
+            <vb-row>
+                <vb-col>
+                    <vb-table :tableData="tableData">
+                        <vb-tableCol label="姓名" prop='name' width="200"></vb-tableCol>
+                        <vb-tableCol label="时间" prop='date' ></vb-tableCol>
+                        <vb-tableCol label="地址" prop='address'></vb-tableCol>
+                    </vb-table>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col>
                     tableData: 表格数据（Array）
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vTable :tableData="tableData"&gt;
-    &lt;vTableCol label="姓名" prop='name' width="200"&gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="时间" prop='date' &gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="地址" prop='address'&gt;&lt;/vTableCol&gt;
-&lt;/vTable&gt;
+&lt;vb-table :tableData="tableData"&gt;
+    &lt;vb-tableCol label="姓名" prop='name' width="200"&gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="时间" prop='date' &gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="地址" prop='address'&gt;&lt;/vb-tableCol&gt;
+&lt;/vb-table&gt;
                 </code><code class="javascript">
 &lt;script&gt;
-import {vTable, vTableCol} from '../../components/table/main'
+import {vb-table, vb-tableCol} from '../../components/table/main'
 export default {
     data() {
         return {
@@ -66,8 +66,8 @@ export default {
         }
     },
     components: {
-        vTable,
-        vTableCol
+        vb-table,
+        vb-tableCol
     }
 }
 
@@ -76,177 +76,169 @@ export default {
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">style 样式</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">style 样式</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    窄边：<vSwitch v-model="narrow"></vSwitch>
-                </vCol>
-                <vCol>
-                    斑纹：<vSwitch v-model="stripe"></vSwitch>
-                </vCol>
-                <vCol>
-                    边框：<vSwitch v-model="border"></vSwitch>
-                </vCol>
-                <vCol>
-                    fullwidth：<vSwitch v-model="fullWidth"></vSwitch>
-                </vCol>
-                <vCol>
-                    checkbox: <vSwitch v-model="checkable"></vSwitch>
-                </vCol>
-                <vCol>
-                    index: <vSwitch v-model="showIndex"></vSwitch>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol>
-                    <vTable :tableData="tableData"
+            <vb-row>
+                <vb-col>
+                    窄边：<vb-switch v-model="narrow"></vb-switch>
+                </vb-col>
+                <vb-col>
+                    斑纹：<vb-switch v-model="stripe"></vb-switch>
+                </vb-col>
+                <vb-col>
+                    边框：<vb-switch v-model="border"></vb-switch>
+                </vb-col>
+                <vb-col>
+                    fullwidth：<vb-switch v-model="fullWidth"></vb-switch>
+                </vb-col>
+                <vb-col>
+                    checkbox: <vb-switch v-model="checkable"></vb-switch>
+                </vb-col>
+                <vb-col>
+                    index: <vb-switch v-model="showIndex"></vb-switch>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col>
+                    <vb-table :tableData="tableData"
                             :narrow="narrow"
                             :border="border"
                             :stripe="stripe"
                             :fullwidth="fullWidth"
                             :checkable="checkable"
                             :showIndex="showIndex">
-                        <vTableCol label="姓名" prop='name' width="200"></vTableCol>
-                        <vTableCol label="时间" prop='date' ></vTableCol>
-                        <vTableCol label="地址" prop='address'></vTableCol>
-                    </vTable>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol>
+                        <vb-tableCol label="姓名" prop='name' width="200"></vb-tableCol>
+                        <vb-tableCol label="时间" prop='date' ></vb-tableCol>
+                        <vb-tableCol label="地址" prop='address'></vb-tableCol>
+                    </vb-table>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col>
                     narrow、border、stripe、fullwidth、checkable、showIndex：(Boolean)可选值为 true 或 false
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vTable :tableData="tableData" :narrow="narrow" :border="border" :stripe="stripe" :fullwidth="fullWidth"&gt;
-    &lt;vTableCol label="姓名" prop='name' width="200"&gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="时间" prop='date' &gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="地址" prop='address'&gt;&lt;/vTableCol&gt;
-&lt;/vTable&gt;
+&lt;vb-table :tableData="tableData" :narrow="narrow" :border="border" :stripe="stripe" :fullwidth="fullWidth"&gt;
+    &lt;vb-tableCol label="姓名" prop='name' width="200"&gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="时间" prop='date' &gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="地址" prop='address'&gt;&lt;/vb-tableCol&gt;
+&lt;/vb-table&gt;
                 </code>
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">event 事件</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">event 事件</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    <vTable :tableData="tableData"
+            <vb-row>
+                <vb-col>
+                    <vb-table :tableData="tableData"
                             :clickable="true"
                             :checkable="true"
                             rowKey="name"
                             @headlerClick="headlerClick"
                             @selectChange="headlerSelect">
-                        <vTableCol label="姓名" prop='name' width="200"></vTableCol>
-                        <vTableCol label="时间" prop='date' ></vTableCol>
-                        <vTableCol label="地址" prop='address'></vTableCol>
-                    </vTable>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol>
+                        <vb-tableCol label="姓名" prop='name' width="200"></vb-tableCol>
+                        <vb-tableCol label="时间" prop='date' ></vb-tableCol>
+                        <vb-tableCol label="地址" prop='address'></vb-tableCol>
+                    </vb-table>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col>
                     <p>clickKey: {{clickKey}}</p>
                     <p>selectedKeys: {{selectedKeys}}</p>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col>
                     <p>clickable: 是否可点击</p>
                     <p>checkable: 是否可多选</p>
                     <p>rowKey: 选择的字段（默认index）</p>
                     <p>selectChange: 多选回调 return 选中的keys和行数据</p>
                     <p>headlerClick 点击回调 return 点击的key和行数据</p>
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vTable :tableData="tableData"
+&lt;vb-table :tableData="tableData"
     :clickable="true"
     :checkable="true"
     rowKey="name"
     @headlerClick="headlerClick"
     @selectChange="headlerSelect"&gt;
-    &lt;vTableCol label="姓名" prop='name' width="200"&gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="时间" prop='date' &gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="地址" prop='address'&gt;&lt;/vTableCol&gt;
-&lt;/vTable&gt;
+    &lt;vb-tableCol label="姓名" prop='name' width="200"&gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="时间" prop='date' &gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="地址" prop='address'&gt;&lt;/vb-tableCol&gt;
+&lt;/vb-table&gt;
                 </code>
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">diy 自定义</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">diy 自定义</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    <vTable :tableData="tableData">
-                        <vTableCol label="姓名" prop='name' width="200"></vTableCol>
-                        <vTableCol label="时间" prop='date' ></vTableCol>
-                        <vTableCol label="地址" prop='address'></vTableCol>
-                        <vTableCol label="操作">
+            <vb-row>
+                <vb-col>
+                    <vb-table :tableData="tableData">
+                        <vb-tableCol label="姓名" prop='name' width="200"></vb-tableCol>
+                        <vb-tableCol label="时间" prop='date' ></vb-tableCol>
+                        <vb-tableCol label="地址" prop='address'></vb-tableCol>
+                        <vb-tableCol label="操作">
                             <template scope="row">
-                                <vButton state="info" @click="showItem(row)">选择</vButton>
+                                <vb-button state="info" @click="showItem(row)">选择</vb-button>
                             </template>
-                        </vTableCol>
-                    </vTable>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol>
+                        </vb-tableCol>
+                    </vb-table>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col>
                     seelctedData: {{showItemData}}
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col>
                     通过 template 自定义模板，通过scope 获取行数据
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vTable :tableData="tableData"&gt;
-    &lt;vTableCol label="姓名" prop='name' width="200"&gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="时间" prop='date' &gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="地址" prop='address'&gt;&lt;/vTableCol&gt;
-    &lt;vTableCol label="操作"&gt;
+&lt;vb-table :tableData="tableData"&gt;
+    &lt;vb-tableCol label="姓名" prop='name' width="200"&gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="时间" prop='date' &gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="地址" prop='address'&gt;&lt;/vb-tableCol&gt;
+    &lt;vb-tableCol label="操作"&gt;
         &lt;template scope="row"&gt;
-            &lt;vButton state="info" @click="showItem(row)"&gt;选择&lt;/vButton&gt;
+            &lt;vb-button state="info" @click="showItem(row)"&gt;选择&lt;/vb-button&gt;
         &lt;/template&gt;
-    &lt;/vTableCol&gt;
-&lt;/vTable&gt;
+    &lt;/vb-tableCol&gt;
+&lt;/vb-table&gt;
                 </code>
             </template>
         </vCodePanel>
 
-    </vContent>
+    </vb-content>
 </template>
 
 <script>
-    import vContent from '../../components/layout/content/content.vue'
-    import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-    import {vRow, vCol} from '../../components/layout/columns/main'
-    import vTitle from '../../components/title'
-    import {vButton} from '../../components/button'
-    import {vTable, vTableCol} from '../../components/table/index'
-    import vSwitch from '../../components/switch/src/switch.vue'
 
     export default {
         data() {
@@ -281,26 +273,7 @@ export default {
             }
         },
         components: {
-            vTable,
-            vTitle,
-            vContentHeader,
-            vBreadcrumb,
-            vBreadcrumbItem,
-            vCodePanel,
-            vRow,
-            vCol,
-            vContent,
-            vTableCol,
-            vButton,
-            vSwitch
-        },
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {
+            vCodePanel
         },
         methods: {
             headlerClick(key, datas){
@@ -317,7 +290,3 @@ export default {
         }
     }
 </script>
-
-<style lang="scss" rel="stylesheet/scss" scoped>
-
-</style>

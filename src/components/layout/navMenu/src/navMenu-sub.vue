@@ -25,12 +25,12 @@
 </template>
 
 <script>
-    import vIcon from '../../icon/src/icon.vue'
-    import MenuMixins from './menu'
+    import vIcon from '../../../icon/src/icon.vue'
+    import MenuMixins from './mixins'
 
     export default {
-        name: 'vNavSubmenu',
-        componentName: 'vNavSubmenu',
+        name: 'vb-navmenuSub',
+        componentName: 'vb-navmenuSub',
         props: {
             title: {
                 type: String,

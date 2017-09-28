@@ -4,6 +4,8 @@
 
 <script>
     export default {
+        name: 'vb-title',
+        componentName: 'vb-title',
         props: {
             level: {
                 type: [Number, String],

@@ -33,6 +33,8 @@
     import vIcon from '../../icon'
     import vTitle from '../../title'
     export default {
+        name: 'vb-notify',
+        componentName: 'vb-notify',
         props: {
             type: String,
             size: String,

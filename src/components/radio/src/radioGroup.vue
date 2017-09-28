@@ -13,8 +13,8 @@
 
 <script>
     export default {
-        name: 'radioGroup',
-        componentName: 'radioGroup',
+        name: 'vb-radioGroup',
+        componentName: 'vb-radioGroup',
         props: {
             value: [String, Number]
         },
@@ -32,7 +32,7 @@
             }
         },
         mounted(){
-            this.isBtn = this.$children.length > 0 && this.$children[0].$options.componentName === 'radioBtn'
+            this.isBtn = this.$children.length > 0 && this.$children[0].$options.componentName === 'vb-radioBtn'
         },
 
         methods: {

@@ -4,6 +4,8 @@
 
 <script>
     export default {
+        name: 'vb-buttonGroup',
+        componentName: 'vb-buttonGroup',
         render: function (h) {
             return h(
                 'div',

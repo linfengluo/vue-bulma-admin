@@ -30,8 +30,8 @@
 <script>
     import vIcon from '../../icon/src/icon.vue'
     export default {
-        name: 'button',
-        componentName: 'button',
+        name: 'vb-button',
+        componentName: 'vb-button',
         props: {
             styles: String,
             state: String,

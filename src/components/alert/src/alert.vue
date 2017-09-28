@@ -41,6 +41,8 @@
 <script>
     import vIcon from '../../icon'
     export default {
+        name: 'vb-alert',
+        componentName: 'vb-alert',
         props: {
             type: String,
             size: String,

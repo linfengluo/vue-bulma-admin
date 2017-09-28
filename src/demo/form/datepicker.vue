@@ -2,103 +2,103 @@
     Created by linfengluo@gmail.com on 2017/9/25.
 -->
 <template>
-    <vContent>
-        <vContentHeader>
-            <vTitle level="3">datepicker</vTitle>
-            <vBreadcrumb slot="right">
-                <vBreadcrumbItem>Form</vBreadcrumbItem>
-                <vBreadcrumbItem>Datepicker</vBreadcrumbItem>
-            </vBreadcrumb>
-        </vContentHeader>
+    <vb-content>
+        <vb-contentHeader>
+            <vb-title level="3">datepicker</vb-title>
+            <vb-breadcrumbGroup slot="right">
+                <vb-breadcrumb>Form</vb-breadcrumb>
+                <vb-breadcrumb>Datepicker</vb-breadcrumb>
+            </vb-breadcrumbGroup>
+        </vb-contentHeader>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">基本用法</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">基本用法</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vDatePicker v-model="date1" :fullwidth="true" placeholder="only Date"></vDatePicker>
-                    <vDatePicker v-model="date2" :fullwidth="true" placeholder="Date and Time" :enableTime="true"></vDatePicker>
-                    <vDatePicker v-model="date13" :fullwidth="true" placeholder="格式化：YYYY年MM月DD日" format="YYYY年MM月DD日"></vDatePicker>
-                    <vDatePicker v-model="date4" :fullwidth="true" :disabled="true" placeholder="disabled"></vDatePicker>
-                    <vDatePicker v-model="date5" :fullwidth="true" :inline="true" placeholder="inline"></vDatePicker>
-                </vCol>
-                <vCol>
+            <vb-row>
+                <vb-col size="7">
+                    <vb-datepicker v-model="date1" :fullwidth="true" placeholder="only Date"></vb-datepicker>
+                    <vb-datepicker v-model="date2" :fullwidth="true" placeholder="Date and Time" :enableTime="true"></vb-datepicker>
+                    <vb-datepicker v-model="date13" :fullwidth="true" placeholder="格式化：YYYY年MM月DD日" format="YYYY年MM月DD日"></vb-datepicker>
+                    <vb-datepicker v-model="date4" :fullwidth="true" :disabled="true" placeholder="disabled"></vb-datepicker>
+                    <vb-datepicker v-model="date5" :fullwidth="true" :inline="true" placeholder="inline"></vb-datepicker>
+                </vb-col>
+                <vb-col>
                     <p>enableTime: [Boolean]是否可选择时间</p>
                     <p>disabled: [Boolean]是否可点击</p>
                     <p>inline: [Boolean]是否一直显示日历</p>
                     <p>format: [String]格式化--年(YYYY)，月(MM)，日(DD)，小时(HH)，分(mm)，秒(ss)</p>
                     <p>disabled: [Boolean]是否可选择</p>
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vDatePicker v-model="date1" :fullwidth="true" placeholder="only Date"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date2" :fullwidth="true" placeholder="Date and Time" :enableTime="true"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date13" :fullwidth="true" placeholder="格式化：YYYY年MM月DD日" format="YYYY年MM月DD日"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date4" :fullwidth="true" :disabled="true" placeholder="disabled"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date5" :fullwidth="true" :inline="true" placeholder="inline"&gt;&lt;/vDatePicker&gt;
+&lt;vb-datepicker v-model="date1" :fullwidth="true" placeholder="only Date"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date2" :fullwidth="true" placeholder="Date and Time" :enableTime="true"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date13" :fullwidth="true" placeholder="格式化：YYYY年MM月DD日" format="YYYY年MM月DD日"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date4" :fullwidth="true" :disabled="true" placeholder="disabled"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date5" :fullwidth="true" :inline="true" placeholder="inline"&gt;&lt;/vb-datepicker&gt;
                 </code>
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">Mode 类型</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">Mode 类型</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vDatePicker v-model="date6" mode="single" :fullwidth="true" placeholder="single"></vDatePicker>
-                    <vDatePicker v-model="date7" mode="multiple" :fullwidth="true" placeholder="multiple"></vDatePicker>
-                    <vDatePicker v-model="date8" mode="range" :fullwidth="true" placeholder="range"></vDatePicker>
-                </vCol>
-                <vCol>
+            <vb-row>
+                <vb-col size="7">
+                    <vb-datepicker v-model="date6" mode="single" :fullwidth="true" placeholder="single"></vb-datepicker>
+                    <vb-datepicker v-model="date7" mode="multiple" :fullwidth="true" placeholder="multiple"></vb-datepicker>
+                    <vb-datepicker v-model="date8" mode="range" :fullwidth="true" placeholder="range"></vb-datepicker>
+                </vb-col>
+                <vb-col>
                     <p>mode: 日期选择类型</p>
                     <p>可选择的值有：single（单一日期）、multiple（多选）、range（范围）</p>
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-    &lt;vDatePicker v-model="date6" mode="single" :fullwidth="true" placeholder="single"&gt;&lt;/vDatePicker&gt;
-    &lt;vDatePicker v-model="date7" mode="multiple" :fullwidth="true" placeholder="multiple"&gt;&lt;/vDatePicker&gt;
-    &lt;vDatePicker v-model="date8" mode="range" :fullwidth="true" placeholder="range"&gt;&lt;/vDatePicker&gt;
+    &lt;vb-datepicker v-model="date6" mode="single" :fullwidth="true" placeholder="single"&gt;&lt;/vb-datepicker&gt;
+    &lt;vb-datepicker v-model="date7" mode="multiple" :fullwidth="true" placeholder="multiple"&gt;&lt;/vb-datepicker&gt;
+    &lt;vb-datepicker v-model="date8" mode="range" :fullwidth="true" placeholder="range"&gt;&lt;/vb-datepicker&gt;
                 </code>
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">Limit 限制</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">Limit 限制</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vDatePicker v-model="date14" :fullwidth="true" placeholder="maxDate： 2017-11-11" maxDate="2017-11-11"></vDatePicker>
-                    <vDatePicker v-model="date15" :fullwidth="true" placeholder="minDate： 2017-09-15" minDate="2017-09-15"></vDatePicker>
-                    <vDatePicker v-model="date16" :fullwidth="true" placeholder="disableDate: Array[function]" :disableDate="disableDate1"></vDatePicker>
-                    <vDatePicker v-model="date17" :fullwidth="true" placeholder="disableDate: Array[date]" :disableDate="disableDate2"></vDatePicker>
-                    <vDatePicker v-model="date18" :fullwidth="true" placeholder="disableDate: Array[object]" :disableDate="disableDate3"></vDatePicker>
-                    <vDatePicker v-model="date19" :fullwidth="true" placeholder="enableDate: Array[function]" :enableDate="enableDate"></vDatePicker>
-                </vCol>
-                <vCol>
+            <vb-row>
+                <vb-col size="7">
+                    <vb-datepicker v-model="date14" :fullwidth="true" placeholder="maxDate： 2017-11-11" maxDate="2017-11-11"></vb-datepicker>
+                    <vb-datepicker v-model="date15" :fullwidth="true" placeholder="minDate： 2017-09-15" minDate="2017-09-15"></vb-datepicker>
+                    <vb-datepicker v-model="date16" :fullwidth="true" placeholder="disableDate: Array[function]" :disableDate="disableDate1"></vb-datepicker>
+                    <vb-datepicker v-model="date17" :fullwidth="true" placeholder="disableDate: Array[date]" :disableDate="disableDate2"></vb-datepicker>
+                    <vb-datepicker v-model="date18" :fullwidth="true" placeholder="disableDate: Array[object]" :disableDate="disableDate3"></vb-datepicker>
+                    <vb-datepicker v-model="date19" :fullwidth="true" placeholder="enableDate: Array[function]" :enableDate="enableDate"></vb-datepicker>
+                </vb-col>
+                <vb-col>
                     <p>maxDate/minDate： [String, Number, Date]最大日期/最小日期</p>
                     <p>disableDate： [Array] 不可选择的日期</p>
                     <p>enableDate： [Array]可以选择的日期</p>
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vDatePicker v-model="date14" :fullwidth="true" placeholder="maxDate： 2017-11-11" maxDate="2017-11-11"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date15" :fullwidth="true" placeholder="minDate： 2017-09-15" minDate="2017-09-15"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date16" :fullwidth="true" placeholder="disableDate: Array[function]" :disableDate="disableDate1"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date17" :fullwidth="true" placeholder="disableDate: Array[date]" :disableDate="disableDate2"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date18" :fullwidth="true" placeholder="disableDate: Array[object]" :disableDate="disableDate3"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date19" :fullwidth="true" placeholder="enableDate: Array[function]" :enableDate="enableDate"&gt;&lt;/vDatePicker&gt;
+&lt;vb-datepicker v-model="date14" :fullwidth="true" placeholder="maxDate： 2017-11-11" maxDate="2017-11-11"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date15" :fullwidth="true" placeholder="minDate： 2017-09-15" minDate="2017-09-15"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date16" :fullwidth="true" placeholder="disableDate: Array[function]" :disableDate="disableDate1"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date17" :fullwidth="true" placeholder="disableDate: Array[date]" :disableDate="disableDate2"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date18" :fullwidth="true" placeholder="disableDate: Array[object]" :disableDate="disableDate3"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date19" :fullwidth="true" placeholder="enableDate: Array[function]" :enableDate="enableDate"&gt;&lt;/vb-datepicker&gt;
                 </code><code class="javascript">
 &lt;script&gt;
     export default {
@@ -140,49 +140,41 @@
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">Size 大小</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">Size 大小</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vDatePicker v-model="date20" :fullwidth="true" placeholder="small" size="small"></vDatePicker>
-                    <vDatePicker v-model="date21" :fullwidth="true" placeholder="normal"></vDatePicker>
-                    <vDatePicker v-model="date22" :fullwidth="true" placeholder="medium" size="medium"></vDatePicker>
-                    <vDatePicker v-model="date23" :fullwidth="true" placeholder="large" size="large"></vDatePicker>
-                </vCol>
-                <vCol >
+            <vb-row>
+                <vb-col size="7">
+                    <vb-datepicker v-model="date20" :fullwidth="true" placeholder="small" size="small"></vb-datepicker>
+                    <vb-datepicker v-model="date21" :fullwidth="true" placeholder="normal"></vb-datepicker>
+                    <vb-datepicker v-model="date22" :fullwidth="true" placeholder="medium" size="medium"></vb-datepicker>
+                    <vb-datepicker v-model="date23" :fullwidth="true" placeholder="large" size="large"></vb-datepicker>
+                </vb-col>
+                <vb-col >
                     通过 size 属性指定输入框的尺寸
                     可选择的值： small | medium | large
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code">
                 <code class="html">
-&lt;vDatePicker v-model="date20" :fullwidth="true" placeholder="small" size="small"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date21" :fullwidth="true" placeholder="normal"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date22" :fullwidth="true" placeholder="medium" size="medium"&gt;&lt;/vDatePicker&gt;
-&lt;vDatePicker v-model="date23" :fullwidth="true" placeholder="large" size="large"&gt;&lt;/vDatePicker&gt;
+&lt;vb-datepicker v-model="date20" :fullwidth="true" placeholder="small" size="small"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date21" :fullwidth="true" placeholder="normal"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date22" :fullwidth="true" placeholder="medium" size="medium"&gt;&lt;/vb-datepicker&gt;
+&lt;vb-datepicker v-model="date23" :fullwidth="true" placeholder="large" size="large"&gt;&lt;/vb-datepicker&gt;
                 </code>
             </template>
         </vCodePanel>
 
 
-    </vContent>
+    </vb-content>
 </template>
 
 <script>
-    import { vForm, vFormItem } from '../../components/form'
-    import vContent from '../../components/layout/content/content.vue'
-    import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-    import {vRow, vCol} from '../../components/layout/columns/main'
-    import vTitle from '../../components/title'
-    import vDatePicker from '../../components/datepicker'
     export default {
-
         data() {
             return {
                 date1: '',
@@ -232,32 +224,8 @@
             }
         },
         components: {
-            vForm,
-            vFormItem,
-            vContent,
-            vTitle,
-            vContentHeader,
-            vBreadcrumb,
-            vBreadcrumbItem,
-            vCodePanel,
-            vRow,
-            vCol,
-            vDatePicker
-        },
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {
-
-        },
-        methods: {
+            vCodePanel
         }
     }
 </script>
 
-<style lang="scss" rel="stylesheet/scss">
-
-</style>

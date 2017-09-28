@@ -26,8 +26,8 @@
 
 <script>
     export default {
-        name: 'radioBtn',
-        componentName: 'radioBtn',
+        name: 'vb-radioBtn',
+        componentName: 'vb-radioBtn',
         props: {
             name: String,
             checked: {
@@ -70,7 +70,7 @@
             isInGroup(){
                 let parent = this.$parent
                 while (parent) {
-                    if (parent.$options.componentName !== 'radioGroup') {
+                    if (parent.$options.componentName !== 'vb-radioGroup') {
                         parent = parent.$parent
                     } else {
                         this.radioGroup = parent

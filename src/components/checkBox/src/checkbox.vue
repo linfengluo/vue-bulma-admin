@@ -32,8 +32,8 @@
 
 <script>
     export default {
-        name: 'checkboxItem',
-        componentName: 'checkboxItem',
+        name: 'vb-checkbox',
+        componentName: 'vb-checkbox',
         props: {
             label: {
                 type: [String, Number, Boolean],
@@ -104,7 +104,7 @@
             isInGroup(){
                 let parent = this.$parent
                 while (parent) {
-                    if (parent.$options.componentName !== 'checkboxGroup') {
+                    if (parent.$options.componentName !== 'vb-checkboxGroup') {
                         parent = parent.$parent
                     } else {
                         this.checkboxGroup = parent

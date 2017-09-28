@@ -9,6 +9,8 @@
 
 <script>
     export default {
+        name: 'vb-col',
+        componentName: 'vb-col',
         props: {
             size: {
                 type: [String, Number],

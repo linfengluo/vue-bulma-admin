@@ -21,8 +21,16 @@
 </template>
 
 <script>
+    import Vue from 'vue'
+    import VueHighlightJS from 'vue-highlightjs'
+    import 'highlightjs/styles/github-gist.css'
     import vIcon from '../icon/src/icon.vue'
+
+    Vue.use(VueHighlightJS)
+
     export default {
+        name: 'vb-codepanel',
+        componentName: 'vb-codepanel',
         data(){
             return {
                 isOpen: false,

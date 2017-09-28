@@ -37,13 +37,14 @@
     import Flatpickr from 'flatpickr'
     import 'flatpickr/dist/flatpickr.min.css'
     import vIcon from '../../icon'
+    import GlobalMixins from '../../../mixins/global'
 
     const Zh = require('flatpickr/dist/l10n/zh.js').zh
     Flatpickr.localize(Zh)
 
     export default {
-        name: 'datepicker',
-        componentName: 'datepicker',
+        name: 'vb-datepicker',
+        componentName: 'vb-datepicker',
         props: {
             value: {
                 type: [String, Number, Date],
@@ -106,6 +107,7 @@
                 }
             }
         },
+        mixins: [GlobalMixins],
         data() {
             let dateFormat = ''
 

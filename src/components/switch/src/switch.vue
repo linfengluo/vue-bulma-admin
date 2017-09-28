@@ -36,6 +36,8 @@
 
 <script>
     export default {
+        name: 'vb-switch',
+        componentName: 'vb-switch',
         props: {
             value: {
                 type: [Boolean, String, Number],

@@ -5,7 +5,6 @@
 const menuMixins = {
     data(){
         return {
-
             currentRoutePath: '/'
         }
     },
@@ -16,9 +15,9 @@ const menuMixins = {
 
     computed: {
         rootMenu(){
-            if (this.$options.componentName !== 'vNavMenu') {
+            if (this.$options.componentName !== 'vb-navmenu') {
                 var parent = this.$parent
-                while (parent && parent.$options.componentName !== 'vNavMenu') {
+                while (parent && parent.$options.componentName !== 'vb-navmenu') {
                     parent = parent.$parent
                 }
                 return parent
@@ -26,7 +25,6 @@ const menuMixins = {
                 return this
             }
         }
-
     },
 
     watch: {

@@ -12,8 +12,8 @@
 
 <script>
     export default {
-        name: 'selectOption',
-        componentName: 'selectOption',
+        name: 'vb-selecterItem',
+        componentName: 'vb-selecterItem',
         props: {
             value: {
                 type: String,

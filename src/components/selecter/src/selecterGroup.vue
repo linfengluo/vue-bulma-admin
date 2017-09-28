@@ -31,9 +31,10 @@
 </template>
 
 <script>
+    import GlobalMixins from '../../../mixins/global'
     export default {
-        name: 'select',
-        componentName: 'select',
+        name: 'vb-selecter',
+        componentName: 'vb-selecter',
         props: {
             value: {
                 type: String,
@@ -74,6 +75,7 @@
                 selfModel: this.value
             }
         },
+        mixins: [GlobalMixins],
         created(){
             if (this.value === '' && !this.disabled) {
                 let index = 0

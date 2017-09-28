@@ -24,8 +24,8 @@
 
 <script>
     export default {
-        name: 'radio',
-        componentName: 'radio',
+        name: 'vb-radio',
+        componentName: 'vb-radio',
         props: {
             name: String,
             checked: {
@@ -68,7 +68,7 @@
             isInGroup(){
                 let parent = this.$parent
                 while (parent) {
-                    if (parent.$options.componentName !== 'radioGroup') {
+                    if (parent.$options.componentName !== 'vb-radioGroup') {
                         parent = parent.$parent
                     } else {
                         this.radioGroup = parent
@@ -87,6 +87,7 @@
 .vb-radio{
     padding-left: 20px;
     user-select: none;
+    transition: all .3s;
 
     input[type="radio"]{
         cursor: pointer;

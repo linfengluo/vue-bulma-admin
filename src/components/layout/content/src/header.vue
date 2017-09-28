@@ -17,23 +17,13 @@
 
 <script>
     export default {
-        data() {
-            return {}
-        },
-        components: {},
-        mixins: [],
-        created(){
-        },
-        mounted(){
-        },
-        watch: {},
-        computed: {},
-        methods: {}
+        name: 'vb-contentHeader',
+        componentName: 'vb-contentHeader'
     }
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../../sass/variables/variables";
+    @import "../../../../sass/variables/_variables";
 .vb-header{
     height: $header-height;
     line-height: $header-height;

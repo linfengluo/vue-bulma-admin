@@ -2,11 +2,11 @@
  * Created by linfengluo@gmail.com on 2017/9/18.
  */
 
-import vCheckbox from '../../checkBox/src/checkbox.vue'
+import {CheckBox} from '../../checkBox'
 
 export default {
-    name: 'tableTr',
-    componentName: 'tableTr',
+    name: 'vb-tableTr',
+    componentName: 'vb-tableTr',
     props: {
         columns: {
             type: Array,
@@ -33,7 +33,7 @@ export default {
         }
     },
     components: {
-        vCheckbox
+        CheckBox
     },
     computed: {
         showIndex(){
@@ -67,7 +67,7 @@ export default {
         return (
             <tr onClick={() => this.targetTable.handlerClickEvent(this.targetKey, row)}>
                 {
-                    this.checkable ? <td> <div class="vb-table__checkbox"> <vCheckbox value={this.isChecked} onChange={value => this.handlerChange(value)}><span></span></vCheckbox> </div></td> : null
+                    this.checkable ? <td> <div class="vb-table__checkbox"> <CheckBox value={this.isChecked} onChange={value => this.handlerChange(value)}><span></span></CheckBox> </div></td> : null
                 }
                 {
                     this.showIndex ? <td> #{this.index + 1} </td> : null

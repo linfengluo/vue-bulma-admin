@@ -2,58 +2,56 @@
     Created by linfengluo@gmail.com on 2017/9/25.
 -->
 <template>
-    <vContent>
-        <vContentHeader>
-            <vTitle level="3">textarea</vTitle>
-            <vBreadcrumb slot="right">
-                <vBreadcrumbItem>Form</vBreadcrumbItem>
-                <vBreadcrumbItem>Textarea</vBreadcrumbItem>
-            </vBreadcrumb>
-        </vContentHeader>
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">基本用法</vTitle>
-            </vCol>
-        </vRow>
+    <vb-content>
+        <vb-contentHeader>
+            <vb-title level="3">textarea</vb-title>
+            <vb-breadcrumbGroup slot="right">
+                <vb-breadcrumb>Form</vb-breadcrumb>
+                <vb-breadcrumb>Textarea</vb-breadcrumb>
+            </vb-breadcrumbGroup>
+        </vb-contentHeader>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">基本用法</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text1"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text2" :disabled="true" placeholder="disabled input"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text3" :readOnly="true" placeholder="readOnly"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text4" :rows="5" placeholder="rows = 5"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text1"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text2" :disabled="true" placeholder="disabled input"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text3" :readOnly="true" placeholder="readOnly"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text4" :rows="5" placeholder="rows = 5"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
                     <p>disabled （Boolean）: 是否可输入</p>
                     <p>readOnly （Boolean）: 是否只读</p>
                     <p>rows （String, Number）: 行数</p>
                     <p>placeholder （String）: placeholder</p>
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vTextArea v-model="text1"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text2" :disabled="true" placeholder="disabled input"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text3" :readOnly="true" placeholder="readOnly"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text4" :rows="5" placeholder="rows = 5"&gt;&lt;/vTextArea&gt;
+&lt;vb-textarea v-model="text1"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text2" :disabled="true" placeholder="disabled input"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text3" :readOnly="true" placeholder="readOnly"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text4" :rows="5" placeholder="rows = 5"&gt;&lt;/vb-textarea&gt;
                 </code><code class="javascript">
 &lt;script&gt;
-    import vTextArea from '../../components/textarea'
-
     export default {
         data() {
             return {
@@ -62,9 +60,6 @@
                 text3: '',
                 text4: ''
             }
-        },
-        components: {
-            vTextArea
         }
     }
 &lt;/script&gt;
@@ -73,99 +68,92 @@
         </vCodePanel>
 
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">color 颜色</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">color 颜色</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text6" color="primary" placeholder="color = primary"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text7" color="info" placeholder="color = info"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text8" color="warning" placeholder="color = warning"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text9" color="danger" placeholder="color = danger"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text6" color="primary" placeholder="color = primary"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text7" color="info" placeholder="color = info"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text8" color="warning" placeholder="color = warning"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text9" color="danger" placeholder="color = danger"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
                     color （String）: 颜色，可选值primary、info、warning、danger
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vTextArea v-model="text6" color="primary" placeholder="color = primary"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text7" color="info" placeholder="color = info"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text8" color="warning" placeholder="color = warning"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text9" color="danger" placeholder="color = danger"&gt;&lt;/vTextArea&gt;
+&lt;vb-textarea v-model="text6" color="primary" placeholder="color = primary"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text7" color="info" placeholder="color = info"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text8" color="warning" placeholder="color = warning"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text9" color="danger" placeholder="color = danger"&gt;&lt;/vb-textarea&gt;
                 </code>
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">size 大小</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">size 大小</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text10" size="small" placeholder="size = small"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text11" placeholder="default"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text12" size="medium" placeholder="size = medium"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
-                    <vTextArea v-model="text13" size="large" placeholder="size = large"></vTextArea>
-                </vCol>
-            </vRow>
-            <vRow>
-                <vCol >
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text10" size="small" placeholder="size = small"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text11" placeholder="default"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text12" size="medium" placeholder="size = medium"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
+                    <vb-textarea v-model="text13" size="large" placeholder="size = large"></vb-textarea>
+                </vb-col>
+            </vb-row>
+            <vb-row>
+                <vb-col >
                     size （String）: 大小，small、medium、large
-                </vCol>
-            </vRow>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vTextArea v-model="text10" size="small" placeholder="size = small"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text11" placeholder="default"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text12" size="medium" placeholder="size = medium"&gt;&lt;/vTextArea&gt;
-&lt;vTextArea v-model="text13" size="large" placeholder="size = large"&gt;&lt;/vTextArea&gt;
+&lt;vb-textarea v-model="text10" size="small" placeholder="size = small"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text11" placeholder="default"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text12" size="medium" placeholder="size = medium"&gt;&lt;/vb-textarea&gt;
+&lt;vb-textarea v-model="text13" size="large" placeholder="size = large"&gt;&lt;/vb-textarea&gt;
                 </code>
             </template>
         </vCodePanel>
-    </vContent>
+    </vb-content>
 </template>
 
 <script>
-    import vContent from '../../components/layout/content/content.vue'
-    import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-    import {vRow, vCol} from '../../components/layout/columns/main'
-    import vTitle from '../../components/title'
-    import {vButton} from '../../components/button'
-    import vTextArea from '../../components/textarea'
 
     export default {
         data() {
@@ -186,16 +174,7 @@
             }
         },
         components: {
-            vTextArea,
-            vContent,
-            vTitle,
-            vContentHeader,
-            vBreadcrumb,
-            vBreadcrumbItem,
-            vCodePanel,
-            vRow,
-            vCol,
-            vButton
+            vCodePanel
         },
         mixins: [],
         created(){

@@ -3,8 +3,8 @@
  */
 
 export default {
-    name: 'tableColumn',
-    componentName: 'tableColumn',
+    name: 'vb-tableCol',
+    componentName: 'vb-tableCol',
     props: {
         label: {
             type: String,

@@ -2,37 +2,37 @@
     Created by linfengluo@gmail.com on 2017/9/21.
 -->
 <template>
-    <vContent>
-        <vContentHeader>
-            <vTitle level="3">message</vTitle>
-            <vBreadcrumb slot="right">
-                <vBreadcrumbItem>Notice</vBreadcrumbItem>
-                <vBreadcrumbItem>Message</vBreadcrumbItem>
-            </vBreadcrumb>
-        </vContentHeader>
+    <vb-content>
+        <vb-contentHeader>
+            <vb-title level="3">message</vb-title>
+            <vb-breadcrumbGroup slot="right">
+                <vb-breadcrumb>Notice</vb-breadcrumb>
+                <vb-breadcrumb>Message</vb-breadcrumb>
+            </vb-breadcrumbGroup>
+        </vb-contentHeader>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">基本用法</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">基本用法</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol&gt;
-                <vRow>
-                    <vCol>
-                        <vButton @click="openMessage1">自动关闭</vButton>
-                        <vButton @click="openMessage2">不会自动关闭</vButton>
-                        <vButton @click="openMessage18" >不可手动关闭</vButton>
-                    </vCol>
-                </vRow>
-                </vCol>
-            </vRow>
+            <vb-row>
+                <vb-col&gt;
+                <vb-row>
+                    <vb-col>
+                        <vb-button @click="openMessage1">自动关闭</vb-button>
+                        <vb-button @click="openMessage2">不会自动关闭</vb-button>
+                        <vb-button @click="openMessage18" >不可手动关闭</vb-button>
+                    </vb-col>
+                </vb-row>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vButton @click="openMessage1"&gt;自动关闭&lt;/vButton&gt;
-&lt;vButton @click="openMessage2"&gt;不会自动关闭&lt;/vButton&gt;
-&lt;vButton @click="openMessage18"&gt;不可手动关闭&lt;/vButton&gt;
+&lt;vb-button @click="openMessage1"&gt;自动关闭&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage2"&gt;不会自动关闭&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage18"&gt;不可手动关闭&lt;/vb-button&gt;
                 </code><code class="javascript">
 &lt;script&gt;
 export default {
@@ -66,36 +66,36 @@ export default {
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">State 状态</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">State 状态</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    <vRow>
-                        <vCol>
-                            <vButton @click="openMessage4">default</vButton>
-                            <vButton @click="openMessage19" state="light">light</vButton>
-                            <vButton @click="openMessage5" state="info">info</vButton>
-                            <vButton @click="openMessage20" state="primary">primary</vButton>
-                            <vButton @click="openMessage6" state="warning">warning</vButton>
-                            <vButton @click="openMessage7" state="success">success</vButton>
-                            <vButton @click="openMessage8" state="danger">danger</vButton>
-                        </vCol>
-                    </vRow>
-                </vCol>
-            </vRow>
+            <vb-row>
+                <vb-col>
+                    <vb-row>
+                        <vb-col>
+                            <vb-button @click="openMessage4">default</vb-button>
+                            <vb-button @click="openMessage19" state="light">light</vb-button>
+                            <vb-button @click="openMessage5" state="info">info</vb-button>
+                            <vb-button @click="openMessage20" state="primary">primary</vb-button>
+                            <vb-button @click="openMessage6" state="warning">warning</vb-button>
+                            <vb-button @click="openMessage7" state="success">success</vb-button>
+                            <vb-button @click="openMessage8" state="danger">danger</vb-button>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vButton @click="openMessage4"&gt;default&lt;/vButton&gt;
-&lt;vButton @click="openMessage19" state="light"&gt;light&lt;/vButton&gt;
-&lt;vButton @click="openMessage5" state="info"&gt;info&lt;/vButton&gt;
-&lt;vButton @click="openMessage20" state="primary"&gt;primary&lt;/vButton&gt;
-&lt;vButton @click="openMessage6" state="warning"&gt;warning&lt;/vButton&gt;
-&lt;vButton @click="openMessage7" state="success"&gt;success&lt;/vButton&gt;
-&lt;vButton @click="openMessage8" state="danger"&gt;danger&lt;/vButton&gt;
+&lt;vb-button @click="openMessage4"&gt;default&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage19" state="light"&gt;light&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage5" state="info"&gt;info&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage20" state="primary"&gt;primary&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage6" state="warning"&gt;warning&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage7" state="success"&gt;success&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage8" state="danger"&gt;danger&lt;/vb-button&gt;
                 </code><code class="javascript">
 methods: {
     openMessage4(){
@@ -146,36 +146,36 @@ methods: {
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">disable Title 没有标题</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">disable Title 没有标题</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    <vRow>
-                        <vCol>
-                            <vButton @click="openMessage13">default</vButton>
-                            <vButton @click="openMessage21" state="light">light</vButton>
-                            <vButton @click="openMessage14" state="info">info</vButton>
-                            <vButton @click="openMessage22" state="primary">primary</vButton>
-                            <vButton @click="openMessage15" state="warning">warning</vButton>
-                            <vButton @click="openMessage16" state="success">success</vButton>
-                            <vButton @click="openMessage17" state="danger">danger</vButton>
-                        </vCol>
-                    </vRow>
-                </vCol>
-            </vRow>
+            <vb-row>
+                <vb-col>
+                    <vb-row>
+                        <vb-col>
+                            <vb-button @click="openMessage13">default</vb-button>
+                            <vb-button @click="openMessage21" state="light">light</vb-button>
+                            <vb-button @click="openMessage14" state="info">info</vb-button>
+                            <vb-button @click="openMessage22" state="primary">primary</vb-button>
+                            <vb-button @click="openMessage15" state="warning">warning</vb-button>
+                            <vb-button @click="openMessage16" state="success">success</vb-button>
+                            <vb-button @click="openMessage17" state="danger">danger</vb-button>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vButton @click="openMessage13"&gt;default&lt;/vButton&gt;
-&lt;vButton @click="openMessage21" state="light"&gt;light&lt;/vButton&gt;
-&lt;vButton @click="openMessage14" state="info"&gt;info&lt;/vButton&gt;
-&lt;vButton @click="openMessage22" state="primary"&gt;primary&lt;/vButton&gt;
-&lt;vButton @click="openMessage15" state="warning"&gt;warning&lt;/vButton&gt;
-&lt;vButton @click="openMessage16" state="success"&gt;success&lt;/vButton&gt;
-&lt;vButton @click="openMessage17" state="danger"&gt;danger&lt;/vButton&gt;
+&lt;vb-button @click="openMessage13"&gt;default&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage21" state="light"&gt;light&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage14" state="info"&gt;info&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage22" state="primary"&gt;primary&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage15" state="warning"&gt;warning&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage16" state="success"&gt;success&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage17" state="danger"&gt;danger&lt;/vb-button&gt;
                 </code><code class="javascript">
 openMessage13(){
     this.$message.open({
@@ -217,30 +217,30 @@ openMessage22(){
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">Size 大小</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">Size 大小</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    <vRow>
-                        <vCol>
-                            <vButton @click="openMessage9">small</vButton>
-                            <vButton @click="openMessage10">default</vButton>
-                            <vButton @click="openMessage11">medium</vButton>
-                            <vButton @click="openMessage12">large</vButton>
-                        </vCol>
-                    </vRow>
-                </vCol>
-            </vRow>
+            <vb-row>
+                <vb-col>
+                    <vb-row>
+                        <vb-col>
+                            <vb-button @click="openMessage9">small</vb-button>
+                            <vb-button @click="openMessage10">default</vb-button>
+                            <vb-button @click="openMessage11">medium</vb-button>
+                            <vb-button @click="openMessage12">large</vb-button>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vButton @click="openMessage9"&gt;small&lt;/vButton&gt;
-&lt;vButton @click="openMessage10"&gt;default&lt;/vButton&gt;
-&lt;vButton @click="openMessage11"&gt;medium&lt;/vButton&gt;
-&lt;vButton @click="openMessage12"&gt;large&lt;/vButton&gt;
+&lt;vb-button @click="openMessage9"&gt;small&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage10"&gt;default&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage11"&gt;medium&lt;/vb-button&gt;
+&lt;vb-button @click="openMessage12"&gt;large&lt;/vb-button&gt;
                 </code><code class="javascript">
 methods: {
     openMessage9(){
@@ -274,29 +274,14 @@ methods: {
             </code>
             </template>
         </vCodePanel>
-
-    </vContent>
+    </vb-content>
 </template>
 
 <script>
-    import vContent from '../../components/layout/content/content.vue'
-    import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-    import {vRow, vCol} from '../../components/layout/columns/main'
-    import vTitle from '../../components/title'
-    import {vButton} from '../../components/button'
     export default {
         components: {
-            vContent,
-            vTitle,
-            vContentHeader,
-            vBreadcrumb,
-            vBreadcrumbItem,
-            vCodePanel,
-            vRow,
-            vCol,
-            vButton
+            vCodePanel
         },
         methods: {
             openMessage1(){

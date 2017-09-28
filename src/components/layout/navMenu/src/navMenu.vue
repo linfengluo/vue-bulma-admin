@@ -32,11 +32,11 @@
     import vNavSubmenu from './navMenu-sub.vue'
     import vNavMenuGroup from './navMenu-group.vue'
     import vNavMenuItem from './navMenu-item.vue'
-    import MenuMixins from './menu'
+    import MenuMixins from './mixins'
 
     export default {
-        name: 'vNavMenu',
-        componentName: 'vNavMenu',
+        name: 'vb-navmenu',
+        componentName: 'vb-navmenu',
         props: {
             width: {
                 type: [String, Number],
@@ -102,5 +102,5 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-    @import "menu";
+    @import "./menu";
 </style>

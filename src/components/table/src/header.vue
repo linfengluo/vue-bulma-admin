@@ -20,8 +20,8 @@
 <script>
     import vCheckbox from '../../checkBox/src/checkbox.vue'
     export default {
-        name: 'tableHeader',
-        componentName: 'tableHeader',
+        name: 'vb-tableHeader',
+        componentName: 'vb-tableHeader',
         props: {
             columns: {
                 type: Array,

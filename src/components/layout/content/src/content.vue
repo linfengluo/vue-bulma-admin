@@ -9,6 +9,8 @@
 
 <script>
     export default {
+        name: 'vb-content',
+        componentName: 'vb-content',
         props: {
             width: {
                 type: [String, Number],
@@ -19,7 +21,7 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../../sass/variables/variables";
+    @import "../../../../sass/variables/_variables";
 .vb-content{
     padding: $space * 2 $space * 4;
     overflow: auto;

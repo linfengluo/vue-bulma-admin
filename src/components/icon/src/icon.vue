@@ -11,6 +11,8 @@
 
 <script>
     export default {
+        name: 'vb-icon',
+        componentName: 'vb-icon',
         props: {
             name: {
                 type: String,

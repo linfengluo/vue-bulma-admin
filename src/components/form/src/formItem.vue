@@ -57,6 +57,8 @@
 
 <script>
     export default {
+        name: 'vb-formItem',
+        componentName: 'vb-formItem',
         props: {
             label: String,
             inline: {
@@ -109,7 +111,7 @@
             parentForm(){
                 let parent = this.$parent
                 while (parent) {
-                    if (parent.$options.componentName !== 'form') {
+                    if (parent.$options.componentName !== 'vb-form') {
                         parent = parent.$parent
                     } else {
                         return parent

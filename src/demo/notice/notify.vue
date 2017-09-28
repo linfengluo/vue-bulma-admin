@@ -2,37 +2,37 @@
     Created by linfengluo@gmail.com on 2017/9/21.
 -->
 <template>
-    <vContent>
-        <vContentHeader>
-            <vTitle level="3">notify</vTitle>
-            <vBreadcrumb slot="right">
-                <vBreadcrumbItem>Notice</vBreadcrumbItem>
-                <vBreadcrumbItem>Notify</vBreadcrumbItem>
-            </vBreadcrumb>
-        </vContentHeader>
+    <vb-content>
+        <vb-contentHeader>
+            <vb-title level="3">notify</vb-title>
+            <vb-breadcrumbGroup slot="right">
+                <vb-breadcrumb>Notice</vb-breadcrumb>
+                <vb-breadcrumb>Notify</vb-breadcrumb>
+            </vb-breadcrumbGroup>
+        </vb-contentHeader>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">基本用法</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">基本用法</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol&gt;
-                    <vRow>
-                        <vCol>
-                            <vButton @click="openNotice1">自动关闭</vButton>
-                            <vButton @click="openNotice2">不会自动关闭</vButton>
-                            <vButton @click="openNotice3">没有标题</vButton>
-                        </vCol>
-                    </vRow>
-                </vCol>
-            </vRow>
+            <vb-row>
+                <vb-col&gt;
+                    <vb-row>
+                        <vb-col>
+                            <vb-button @click="openNotice1">自动关闭</vb-button>
+                            <vb-button @click="openNotice2">不会自动关闭</vb-button>
+                            <vb-button @click="openNotice3">没有标题</vb-button>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vButton @click="openNotice1"&gt;自动关闭&lt;/vButton&gt;
-&lt;vButton @click="openNotice2"&gt;不会自动关闭&lt;/vButton&gt;
-&lt;vButton @click="openNotice3"&gt;没有标题&lt;/vButton&gt;
+&lt;vb-button @click="openNotice1"&gt;自动关闭&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice2"&gt;不会自动关闭&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice3"&gt;没有标题&lt;/vb-button&gt;
                 </code><code class="javascript">
 &lt;script&gt;
 export default {
@@ -63,36 +63,36 @@ export default {
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">State 状态</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">State 状态</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    <vRow>
-                        <vCol>
-                            <vButton @click="openNotice4">default</vButton>
-                            <vButton @click="openNotice13" state="light">light</vButton>
-                            <vButton @click="openNotice5" state="info">info</vButton>
-                            <vButton @click="openNotice14" state="primary">primary</vButton>
-                            <vButton @click="openNotice6" state="warning">warning</vButton>
-                            <vButton @click="openNotice7" state="success">success</vButton>
-                            <vButton @click="openNotice8" state="danger">danger</vButton>
-                        </vCol>
-                    </vRow>
-                </vCol>
-            </vRow>
+            <vb-row>
+                <vb-col>
+                    <vb-row>
+                        <vb-col>
+                            <vb-button @click="openNotice4">default</vb-button>
+                            <vb-button @click="openNotice13" state="light">light</vb-button>
+                            <vb-button @click="openNotice5" state="info">info</vb-button>
+                            <vb-button @click="openNotice14" state="primary">primary</vb-button>
+                            <vb-button @click="openNotice6" state="warning">warning</vb-button>
+                            <vb-button @click="openNotice7" state="success">success</vb-button>
+                            <vb-button @click="openNotice8" state="danger">danger</vb-button>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vButton @click="openNotice4"&gt;default&lt;/vButton&gt;
-&lt;vButton @click="openNotice13" state="light"&gt;light&lt;/vButton&gt;
-&lt;vButton @click="openNotice5" state="info"&gt;info&lt;/vButton&gt;
-&lt;vButton @click="openNotice14" state="primary"&gt;primary&lt;/vButton&gt;
-&lt;vButton @click="openNotice6" state="warning"&gt;warning&lt;/vButton&gt;
-&lt;vButton @click="openNotice7" state="success"&gt;success&lt;/vButton&gt;
-&lt;vButton @click="openNotice8" state="danger"&gt;danger&lt;/vButton&gt;
+&lt;vb-button @click="openNotice4"&gt;default&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice13" state="light"&gt;light&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice5" state="info"&gt;info&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice14" state="primary"&gt;primary&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice6" state="warning"&gt;warning&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice7" state="success"&gt;success&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice8" state="danger"&gt;danger&lt;/vb-button&gt;
                 </code><code class="javascript">
 methods: {
     openNotice4(){
@@ -144,30 +144,30 @@ methods: {
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">Size 大小</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">Size 大小</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol>
-                    <vRow>
-                        <vCol>
-                            <vButton @click="openNotice9">small</vButton>
-                            <vButton @click="openNotice10">default</vButton>
-                            <vButton @click="openNotice11">medium</vButton>
-                            <vButton @click="openNotice12">large</vButton>
-                        </vCol>
-                    </vRow>
-                </vCol>
-            </vRow>
+            <vb-row>
+                <vb-col>
+                    <vb-row>
+                        <vb-col>
+                            <vb-button @click="openNotice9">small</vb-button>
+                            <vb-button @click="openNotice10">default</vb-button>
+                            <vb-button @click="openNotice11">medium</vb-button>
+                            <vb-button @click="openNotice12">large</vb-button>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vButton @click="openNotice9"&gt;small&lt;/vButton&gt;
-&lt;vButton @click="openNotice10"&gt;default&lt;/vButton&gt;
-&lt;vButton @click="openNotice11"&gt;medium&lt;/vButton&gt;
-&lt;vButton @click="openNotice12"&gt;large&lt;/vButton&gt;
+&lt;vb-button @click="openNotice9"&gt;small&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice10"&gt;default&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice11"&gt;medium&lt;/vb-button&gt;
+&lt;vb-button @click="openNotice12"&gt;large&lt;/vb-button&gt;
                 </code><code class="javascript">
 methods: {
     openNotice9(){
@@ -202,28 +202,15 @@ methods: {
             </template>
         </vCodePanel>
 
-    </vContent>
+    </vb-content>
 </template>
 
 <script>
-    import vContent from '../../components/layout/content/content.vue'
-    import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-    import {vRow, vCol} from '../../components/layout/columns/main'
-    import vTitle from '../../components/title'
-    import {vButton} from '../../components/button'
+
     export default {
         components: {
-            vContent,
-            vTitle,
-            vContentHeader,
-            vBreadcrumb,
-            vBreadcrumbItem,
-            vCodePanel,
-            vRow,
-            vCol,
-            vButton
+            vCodePanel
         },
         methods: {
             openNotice1(){

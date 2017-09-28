@@ -2,93 +2,93 @@
     Created by linfengluo@gmail.com on 2017/9/13.
 -->
 <template>
-    <vContent>
-        <vContentHeader>
-            <vTitle level="3">selecter</vTitle>
-            <vBreadcrumb slot="right">
-                <vBreadcrumbItem>Form</vBreadcrumbItem>
-                <vBreadcrumbItem>Selecter</vBreadcrumbItem>
-            </vBreadcrumb>
-        </vContentHeader>
+    <vb-content>
+        <vb-contentHeader>
+            <vb-title level="3">selecter</vb-title>
+            <vb-breadcrumbGroup slot="right">
+                <vb-breadcrumb>Form</vb-breadcrumb>
+                <vb-breadcrumb>Selecter</vb-breadcrumb>
+            </vb-breadcrumbGroup>
+        </vb-contentHeader>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">基本用法</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">基本用法</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select1">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select15" :disabled="true">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select16">
-                                <vSelectItem value="option1" :disabled="true">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select17" :width="150">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                </vCol>
-                <vCol >
+            <vb-row>
+                <vb-col size="7">
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select1">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select15" :disabled="true">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select16">
+                                <vb-selecterItem value="option1" :disabled="true">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select17" :width="150">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+                <vb-col >
                     通过 value 属性绑定选择的值
                     <p>通过 disabled 属性决定是否禁用 selecter 或 option</p>
                     <p>通过 width 属性决定宽度</p>
-                </vCol>
+                </vb-col>
 
-            </vRow>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vSelectGroup v-model="select1"&gt;
-    &lt;vSelectItem value="option1"&gt;option1&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
-&lt;/vSelectGroup&gt;
-&lt;vSelectGroup v-model="select15" :disabled="true"&gt;
-    &lt;vSelectItem value="option1"&gt;option1&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
-&lt;/vSelectGroup&gt;
-&lt;vSelectGroup v-model="select16"&gt;
-    &lt;vSelectItem value="option1" :disabled="true"&gt;option1&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
-&lt;/vSelectGroup&gt;
-&lt;vSelectGroup v-model="select17" :width="150"&gt;
-    &lt;vSelectItem value="option1"&gt;option1&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
-&lt;/vSelectGroup&gt;
+&lt;vb-selecter v-model="select1"&gt;
+    &lt;vb-selecterItem value="option1"&gt;option1&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option2"&gt;option2&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option3"&gt;option3&lt;/vb-selecterItem&gt;
+&lt;/vb-selecter&gt;
+&lt;vb-selecter v-model="select15" :disabled="true"&gt;
+    &lt;vb-selecterItem value="option1"&gt;option1&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option2"&gt;option2&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option3"&gt;option3&lt;/vb-selecterItem&gt;
+&lt;/vb-selecter&gt;
+&lt;vb-selecter v-model="select16"&gt;
+    &lt;vb-selecterItem value="option1" :disabled="true"&gt;option1&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option2"&gt;option2&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option3"&gt;option3&lt;/vb-selecterItem&gt;
+&lt;/vb-selecter&gt;
+&lt;vb-selecter v-model="select17" :width="150"&gt;
+    &lt;vb-selecterItem value="option1"&gt;option1&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option2"&gt;option2&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option3"&gt;option3&lt;/vb-selecterItem&gt;
+&lt;/vb-selecter&gt;
 
                 </code><code class="javascript">
 &lt;script&gt;
-import {vSelectGroup, vSelectItem} from '../../components/form/selecter/main'
+import {vb-selecter, vb-selecterItem} from '../../components/form/selecter/main'
 export default {
     data() {
         return {
@@ -96,227 +96,221 @@ export default {
         }
     },
     componnets: {
-        vSelectGroup,
-        vSelectItem
+        vb-selecter,
+        vb-selecterItem
     }
 }
 &lt;/script&gt;
                         </code>
             </template>
         </vCodePanel>
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">Color 颜色</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">Color 颜色</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select2" color="primary">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
+            <vb-row>
+                <vb-col size="7">
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select2" color="primary">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
 
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select3" color="info">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select3" color="info">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
 
-                        </vCol>
-                    </vRow>
+                        </vb-col>
+                    </vb-row>
 
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select4" color="success">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select4" color="success">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
 
-                        </vCol>
-                    </vRow>
+                        </vb-col>
+                    </vb-row>
 
-                    <vRow>
-                        <vCol>
+                    <vb-row>
+                        <vb-col>
 
-                            <vSelectGroup v-model="select5" color="warning">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
+                            <vb-selecter v-model="select5" color="warning">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
 
-                        </vCol>
-                    </vRow>
+                        </vb-col>
+                    </vb-row>
 
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select6" color="danger">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                </vCol>
-                <vCol >
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select6" color="danger">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+                <vb-col >
                     通过 color 属性选择颜色
                     <p>可选择的值： primary | info | success | warning | danger</p>
-                </vCol>
+                </vb-col>
 
-            </vRow>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vSelectGroup v-model="select2" color="primary"&gt;
-    &lt;vSelectItem value="option1"&gt;option1&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
-&lt;/vSelectGroup&gt;
+&lt;vb-selecter v-model="select2" color="primary"&gt;
+    &lt;vb-selecterItem value="option1"&gt;option1&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option2"&gt;option2&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option3"&gt;option3&lt;/vb-selecterItem&gt;
+&lt;/vb-selecter&gt;
                 </code>
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">Size 大小</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">Size 大小</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select7" size="small">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select8">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select9" size="medium">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select10" size="large">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                </vCol>
-                <vCol >
+            <vb-row>
+                <vb-col size="7">
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select7" size="small">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select8">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select9" size="medium">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select10" size="large">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+                <vb-col >
                     通过 size 属性选择大小
                     <p>可选择的值： small | medium | large</p>
-                </vCol>
+                </vb-col>
 
-            </vRow>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vSelectGroup v-model="select7" size="small"&gt;
-    &lt;vSelectItem value="option1"&gt;option1&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
-&lt;/vSelectGroup&gt;
+&lt;vb-selecter v-model="select7" size="small"&gt;
+    &lt;vb-selecterItem value="option1"&gt;option1&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option2"&gt;option2&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option3"&gt;option3&lt;/vb-selecterItem&gt;
+&lt;/vb-selecter&gt;
                 </code>
             </template>
         </vCodePanel>
 
-        <vRow>
-            <vCol>
-                <vTitle level="4" :isMargin="true">States 状态</vTitle>
-            </vCol>
-        </vRow>
+        <vb-row>
+            <vb-col>
+                <vb-title level="4" :isMargin="true">States 状态</vb-title>
+            </vb-col>
+        </vb-row>
         <vCodePanel>
-            <vRow>
-                <vCol size="7">
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select11">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select12" state="hovered">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select13" state="focused">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                    <vRow>
-                        <vCol>
-                            <vSelectGroup v-model="select14" state="loading">
-                                <vSelectItem value="option1">option1</vSelectItem>
-                                <vSelectItem value="option2">option2</vSelectItem>
-                                <vSelectItem value="option3">option3</vSelectItem>
-                            </vSelectGroup>
-                        </vCol>
-                    </vRow>
-                </vCol>
-                <vCol >
+            <vb-row>
+                <vb-col size="7">
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select11">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select12" state="hovered">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select13" state="focused">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                    <vb-row>
+                        <vb-col>
+                            <vb-selecter v-model="select14" state="loading">
+                                <vb-selecterItem value="option1">option1</vb-selecterItem>
+                                <vb-selecterItem value="option2">option2</vb-selecterItem>
+                                <vb-selecterItem value="option3">option3</vb-selecterItem>
+                            </vb-selecter>
+                        </vb-col>
+                    </vb-row>
+                </vb-col>
+                <vb-col >
                     通过 state 属性选择状态
                     <p>可选择的值： hovered | focused | loading</p>
-                </vCol>
+                </vb-col>
 
-            </vRow>
+            </vb-row>
             <template slot="code" >
                 <code class="html">
-&lt;vSelectGroup v-model="select7" state="loading"&gt;
-    &lt;vSelectItem value="option1"&gt;option1&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option2"&gt;option2&lt;/vSelectItem&gt;
-    &lt;vSelectItem value="option3"&gt;option3&lt;/vSelectItem&gt;
-&lt;/vSelectGroup&gt;
+&lt;vb-selecter v-model="select7" state="loading"&gt;
+    &lt;vb-selecterItem value="option1"&gt;option1&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option2"&gt;option2&lt;/vb-selecterItem&gt;
+    &lt;vb-selecterItem value="option3"&gt;option3&lt;/vb-selecterItem&gt;
+&lt;/vb-selecter&gt;
                 </code>
             </template>
         </vCodePanel>
-    </vContent>
+    </vb-content>
 </template>
 
 <script>
-    import vContent from '../../components/layout/content/content.vue'
-    import vContentHeader from '../../components/layout/content/header.vue'
-    import {vBreadcrumb, vBreadcrumbItem} from '../../components/breadcrumb/index'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-    import {vRow, vCol} from '../../components/layout/columns/main'
-    import vTitle from '../../components/title'
-    import {vSelectGroup, vSelectItem} from '../../components/selecter/index'
     export default {
         data() {
             return {
@@ -340,16 +334,7 @@ export default {
             }
         },
         components: {
-            vContent,
-            vTitle,
-            vContentHeader,
-            vBreadcrumb,
-            vBreadcrumbItem,
-            vCodePanel,
-            vRow,
-            vCol,
-            vSelectGroup,
-            vSelectItem
+            vCodePanel
         }
     }
 </script>

@@ -2,10 +2,10 @@
  * Created by linfengluo@gmail.com on 2017/9/18.
  */
 
-import vTable from './src/table.vue'
-import vTableCol from './src/column'
+import Table from './src/table.vue'
+import TableCol from './src/column'
 
 export {
-    vTable,
-    vTableCol
+    Table,
+    TableCol
 }

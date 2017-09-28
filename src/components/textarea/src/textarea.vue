@@ -22,8 +22,8 @@
 
 <script>
     export default {
-        name: 'textarea',
-        componentName: 'textarea',
+        name: 'vb-textarea',
+        componentName: 'vb-textarea',
         props: {
             value: String,
             color: String,

@@ -18,10 +18,10 @@
 </template>
 
 <script>
-    import MenuMixins from './menu'
+    import MenuMixins from './mixins'
     export default {
-        name: 'vNavMenuGroup',
-        componentName: 'vNavMenuGroup',
+        name: 'vb-navmenuGroup',
+        componentName: 'vb-navmenuGroup',
         props: {
             title: {
                 type: String,

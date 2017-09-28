@@ -17,6 +17,8 @@
 
 <script>
     export default {
+        name: 'vb-row',
+        componentName: 'vb-row',
         props: {
             platform: {
                 type: String,

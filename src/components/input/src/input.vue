@@ -53,10 +53,10 @@
 
 <script>
     import vIcon from '../../icon/src/icon.vue'
-
+    import GlobalMixins from '../../../mixins/global'
     export default {
-        name: 'input',
-        componentName: 'input',
+        name: 'vb-input',
+        componentName: 'vb-input',
         props: {
             value: {
                 type: [String, Number],
@@ -118,6 +118,7 @@
                 default: false
             }
         },
+        mixins: [GlobalMixins],
         data() {
             return {
                 currentValue: this.value,

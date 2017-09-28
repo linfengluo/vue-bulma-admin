@@ -24,8 +24,8 @@
     import vTableBody from './body.vue'
 
     export default {
-        name: 'table',
-        componentName: 'table',
+        name: 'vb-table',
+        componentName: 'vb-table',
         props: {
             tableData: {
                 type: Array,

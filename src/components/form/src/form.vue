@@ -13,8 +13,8 @@
 
 <script>
     export default {
-        name: 'form',
-        componentName: 'form',
+        name: 'vb-form',
+        componentName: 'vb-form',
         props: {
             labelWidth: [String, Number],
             rules: Object,

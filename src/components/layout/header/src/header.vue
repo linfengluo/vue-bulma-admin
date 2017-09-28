@@ -34,8 +34,10 @@
 </template>
 
 <script>
-    import vIcon from '../../icon/src/icon.vue'
+    import vIcon from '../../../icon'
     export default {
+        name: 'vb-header',
+        componentName: 'vb-header',
         props: {
             logoType: {
                 type: String,
@@ -77,7 +79,7 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../../sass/variables/_variables";
+    @import "../../../../sass/variables/_variables";
 
     .vb-header{
         position: fixed;
