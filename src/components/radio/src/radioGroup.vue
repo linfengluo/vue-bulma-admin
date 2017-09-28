@@ -46,15 +46,16 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../sass/variables/variables";
+    @import "../../../sass/variables/_variables";
     .vb-radio{
 
         &__groupBtn{
             display: inline-block;
             border: 1px solid $border;
             border-radius: $radius;
-            line-height: 32px;
-            height: 32px;
+            font-size: 0;
+            line-height: 1;
+            vertical-align: middle;
         }
     }
 

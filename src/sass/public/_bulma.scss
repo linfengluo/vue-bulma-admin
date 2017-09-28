@@ -25,3 +25,48 @@
     }
 }
 
+
+.vb-form{
+
+    .field{
+        position: relative;
+
+        &:not(:last-child){
+            margin-bottom: 0;
+        }
+
+        &-label{
+            flex-grow: inherit;
+            flex-basis: inherit;
+        }
+    }
+
+
+
+    &__block{
+        position: relative;
+        overflow: hidden;
+
+        .control{
+            margin-bottom: 18px;
+        }
+
+        .help{
+            position: absolute;
+            bottom: 0px;
+        }
+    }
+
+
+    &__inline{
+
+        .help{
+            position: absolute;
+            bottom: 5px;
+        }
+
+        .control{
+            margin-bottom: 22px;
+        }
+    }
+}

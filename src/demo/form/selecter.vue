@@ -334,7 +334,7 @@ export default {
                 select12: '',
                 select13: '',
                 select14: '',
-                select15: '',
+                select15: 'option2',
                 select16: '',
                 select17: ''
             }

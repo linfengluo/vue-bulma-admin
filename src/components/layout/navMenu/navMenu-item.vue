@@ -22,7 +22,7 @@
 
 <script>
     import vMenuMixins from './menu'
-    import vIcon from '../../icon/icon.vue'
+    import vIcon from '../../icon/src/icon.vue'
 
     export default {
         name: 'vNavMenuItem',

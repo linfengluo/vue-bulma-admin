@@ -145,7 +145,7 @@ export default {
     import vCodePanel from '../../components/codePanel/codePanel.vue'
     import {vRow, vCol} from '../../components/layout/columns/main'
     import vTitle from '../../components/title'
-    import vSwitch from '../../components/switch/switch.vue'
+    import vSwitch from '../../components/switch/src/switch.vue'
     export default {
         data() {
             return {

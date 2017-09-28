@@ -34,7 +34,7 @@
 </template>
 
 <script>
-    import vIcon from '../../icon/icon.vue'
+    import vIcon from '../../icon/src/icon.vue'
     export default {
         props: {
             logoType: {
@@ -80,11 +80,16 @@
     @import "../../../sass/variables/_variables";
 
     .vb-header{
+        position: fixed;
+        top:0;
+        left:0;
+        right: 0;
         padding: 0 $space*4;
         background-color: $header-backgrund;
         height: $header-height;
         line-height: $header-height;
         color: #ffffff;
+        z-index: $header-index;
 
         &--link{
             color: #ffffff;

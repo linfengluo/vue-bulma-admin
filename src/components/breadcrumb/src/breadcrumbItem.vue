@@ -27,7 +27,7 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../sass/variables/variables";
+    @import "../../../sass/variables/_variables";
 
     .vb-breadcrumb{
         &__link{

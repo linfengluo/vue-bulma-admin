@@ -17,13 +17,7 @@
              }"
         >
             <input class="input"
-                   :class="{
-                        'is-small': size === 'small',
-                        'is-medium': size === 'medium',
-                        'is-large': size === 'large',
-                        'is-success': state === 'success',
-                        'is-danger': state === 'danger'
-                   }"
+                   :class="[stateClass, sizeClass]"
                    :name="name"
                    :type="type"
                    :disabled="disabled"
@@ -58,9 +52,11 @@
 </template>
 
 <script>
-    import vIcon from '../icon/icon.vue'
+    import vIcon from '../../icon/src/icon.vue'
 
     export default {
+        name: 'input',
+        componentName: 'input',
         props: {
             value: {
                 type: [String, Number],
@@ -72,7 +68,7 @@
             },
             placeholder: {
                 type: String,
-                default: 'input element'
+                default: ''
             },
             size: String,
             name: String,
@@ -128,13 +124,22 @@
                 iconSize: {
                     normal: 'small',
                     small: 'small',
-                    medium: 'medium',
-                    large: 'large'
+                    medium: 'normal',
+                    large: 'medium'
                 }
             }
         },
         components: {
             vIcon
+        },
+        computed: {
+            sizeClass(){
+                return this.size ? `is-${this.size}` : null
+            },
+
+            stateClass(){
+                return this.state ? `is-${this.state}` : null
+            }
         },
         watch: {
             value(val){

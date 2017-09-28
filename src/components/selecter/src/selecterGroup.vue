@@ -12,7 +12,8 @@
             'is-small': size === 'small',
             'is-medium': size === 'medium',
             'is-large': size === 'large',
-            'is-loading': state === 'loading'
+            'is-loading': state === 'loading',
+            'is-fullwidth': !width && fullwidth
          }, propClass]"
     >
         <select v-model="selfModel"
@@ -22,7 +23,7 @@
                     'is-focused': state === 'focused',
                     'is-hovered': state === 'hovered'
                 }"
-                :style="getStyleWidth(width)"
+                :style="getStyleWidth(fullwidth ? 0 : width)"
           >
             <slot></slot>
         </select>
@@ -31,6 +32,8 @@
 
 <script>
     export default {
+        name: 'select',
+        componentName: 'select',
         props: {
             value: {
                 type: String,
@@ -56,13 +59,14 @@
                 type: Boolean,
                 default: false
             },
-            width: {
-                type: [String, Number],
-                default: ''
-            },
+            width: [String, Number],
             propClass: {
                 type: String,
                 default: ''
+            },
+            fullwidth: {
+                type: Boolean,
+                default: true
             }
         },
         data() {

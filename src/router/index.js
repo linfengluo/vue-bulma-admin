@@ -3,10 +3,12 @@ import Router from 'vue-router'
 import Container from '../pages/index.vue'
 
 const Input = resolve => require(['../demo/form/input.vue'], resolve)
+const TextArea = resolve => require(['../demo/form/textarea.vue'], resolve)
 const CheckBox = resolve => require(['../demo/form/checkbox.vue'], resolve)
 const Selecter = resolve => require(['../demo/form/selecter.vue'], resolve)
 const Raido = resolve => require(['../demo/form/radio.vue'], resolve)
 const Switch = resolve => require(['../demo/form/switch.vue'], resolve)
+const Datepicker = resolve => require(['../demo/form/datepicker.vue'], resolve)
 const Form = resolve => require(['../demo/form/form.vue'], resolve)
 
 const Button = resolve => require(['../demo/elements/button.vue'], resolve)
@@ -31,6 +33,10 @@ export default new Router({
                     name: 'Input',
                     component: Input
                 }, {
+                    path: '/form/textarea',
+                    name: 'TextArea',
+                    component: TextArea
+                }, {
                     path: '/form/checkbox',
                     name: 'CheckBox',
                     component: CheckBox
@@ -46,6 +52,10 @@ export default new Router({
                     path: '/form/switch',
                     name: 'Switch',
                     component: Switch
+                }, {
+                    path: '/form/datepicker',
+                    name: 'Datepicker',
+                    component: Datepicker
                 }, {
                     path: '/form/form',
                     name: 'Form',

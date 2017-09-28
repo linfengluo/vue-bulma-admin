@@ -18,7 +18,7 @@
 </template>
 
 <script>
-    import vCheckbox from '../checkBox/checkbox.vue'
+    import vCheckbox from '../../checkBox/src/checkbox.vue'
     export default {
         name: 'tableHeader',
         componentName: 'tableHeader',

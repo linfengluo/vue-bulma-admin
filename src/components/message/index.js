@@ -3,7 +3,7 @@
  */
 
 import Vue from 'vue'
-import Message from './message.vue'
+import Message from './src/message.vue'
 
 function initMessage(propsData) {
     const MessageComponent = Vue.extend(Message)

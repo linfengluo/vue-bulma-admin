@@ -8,8 +8,8 @@
                 <vIcon size="small" name="bell-o"></vIcon>消息
             </div>
         </vheader>
+        <vNavMenu :menuConfig="menuList" :openIndex="menuIndex"></vNavMenu>
         <div class="vb-container">
-            <vNavMenu :menuConfig="menuList" :openIndex="menuIndex"></vNavMenu>
             <router-view></router-view>
         </div>
     </div>
@@ -18,7 +18,7 @@
 <script>
     import vheader from '../components/layout/header/header.vue'
     import vNavMenu from '../components/layout/navMenu/navMenu.vue'
-    import vIcon from '../components/icon/icon.vue'
+    import vIcon from '../components/icon/src/icon.vue'
 
     import menuConfig from '../config/menu'
 
@@ -52,12 +52,7 @@
 <style lang="scss" rel="stylesheet/scss" scoped>
     @import "../sass/variables/variables";
     .vb-container{
-        position: absolute;
-        top: $header-height;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0;
+        margin: $header-height 0 0 250px;
         overflow: hidden;
     }
 </style>

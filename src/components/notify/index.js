@@ -2,7 +2,7 @@
  * Created by linfengluo@gmail.com on 2017/9/21.
  */
 import Vue from 'vue'
-import Notify from './notify.vue'
+import Notify from './src/notify.vue'
 
 function initNotify(propsData) {
     const NotifyComponent = Vue.extend(Notify)

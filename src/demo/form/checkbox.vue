@@ -84,9 +84,9 @@ export default {
             <vRow>
                 <vCol size="7">
                     <vCheckBoxGroup v-model="select4">
-                        <vCheckBox value="china">中国</vCheckBox>
-                        <vCheckBox value="usa" :checked="true">美国</vCheckBox>
-                        <vCheckBox value="riben">日本</vCheckBox>
+                        <vCheckBox label="china">中国</vCheckBox>
+                        <vCheckBox label="usa" :checked="true">美国</vCheckBox>
+                        <vCheckBox label="riben">日本</vCheckBox>
                     </vCheckBoxGroup>
                     <vRow>
                         <vCol size="5">已选择： {{select4}}</vCol>
@@ -94,16 +94,15 @@ export default {
                 </vCol>
                 <vCol >
                     多个checkbox绑定到同一个数组；
-                    <p>value 属性绑定选中时的值；</p>
-                    <p>label 属性绑定显示的label；</p>
+                    <p>label 属性绑定选中时的值；</p>
                 </vCol>
             </vRow>
             <template slot="code" >
                 <code class="html">
 &lt;vCheckBoxGroup v-model="select4"&gt;
-    &lt;vCheckBox value="china"&gt;中国&lt;/vCheckBox&gt;
-    &lt;vCheckBox value="usa" :checked="true"&gt;美国&lt;/vCheckBox&gt;
-    &lt;vCheckBox value="riben"&gt;日本&lt;/vCheckBox&gt;
+    &lt;vCheckBox label="china"&gt;中国&lt;/vCheckBox&gt;
+    &lt;vCheckBox label="usa" :checked="true"&gt;美国&lt;/vCheckBox&gt;
+    &lt;vCheckBox label="riben"&gt;日本&lt;/vCheckBox&gt;
 &lt;/vCheckBoxGroup&gt;
                 </code>
             </template>
@@ -119,9 +118,9 @@ export default {
             <vRow>
                 <vCol size="7">
                     <vCheckBoxGroup v-model="select5" :max="2">
-                        <vCheckBox value="china">中国</vCheckBox>
-                        <vCheckBox value="usa">美国</vCheckBox>
-                        <vCheckBox value="riben">日本</vCheckBox>
+                        <vCheckBox label="china">中国</vCheckBox>
+                        <vCheckBox label="usa">美国</vCheckBox>
+                        <vCheckBox label="riben">日本</vCheckBox>
                     </vCheckBoxGroup>
                     <vRow>
                         <vCol size="5">已选择： {{select5}}</vCol>
@@ -134,9 +133,9 @@ export default {
             <template slot="code" >
                 <code class="html">
 &lt;vCheckBoxGroup v-model="select5" :max="2"&gt;
-    &lt;vCheckBox value="china"&gt;中国&lt;/vCheckBox&gt;
-    &lt;vCheckBox value="usa" &gt;美国&lt;/vCheckBox&gt;
-    &lt;vCheckBox value="riben"&gt;日本&lt;/vCheckBox&gt;
+    &lt;vCheckBox label="china"&gt;中国&lt;/vCheckBox&gt;
+    &lt;vCheckBox label="usa" &gt;美国&lt;/vCheckBox&gt;
+    &lt;vCheckBox label="riben"&gt;日本&lt;/vCheckBox&gt;
 &lt;/vCheckBoxGroup&gt;
                 </code>
             </template>

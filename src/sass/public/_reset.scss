@@ -18,6 +18,10 @@
     background: $grey-light;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 ul, li{
     list-style: none;
 }

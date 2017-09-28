@@ -52,6 +52,9 @@ const menu = [
                 {
                     title: 'Input',
                     link: '/form/input'
+                }, {
+                    title: 'TextArea',
+                    link: '/form/textarea'
                 },
                 {
                     title: 'Checkbox',
@@ -68,6 +71,9 @@ const menu = [
                 {
                     title: 'Switch',
                     link: '/form/switch'
+                }, {
+                    title: 'Datepicker',
+                    link: '/form/datepicker'
                 },
                 {
                     title: 'Form',

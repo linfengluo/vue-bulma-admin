@@ -2,7 +2,7 @@
  * Created by linfengluo@gmail.com on 2017/9/18.
  */
 
-import vCheckbox from '../checkBox/checkbox.vue'
+import vCheckbox from '../../checkBox/src/checkbox.vue'
 
 export default {
     name: 'tableTr',
@@ -28,7 +28,8 @@ export default {
     data() {
         return {
             targetTable: this.$parent.$parent,
-            currentChecked: false
+            currentChecked: false,
+            tempLabel: ' '
         }
     },
     components: {
@@ -66,7 +67,7 @@ export default {
         return (
             <tr onClick={() => this.targetTable.handlerClickEvent(this.targetKey, row)}>
                 {
-                    this.checkable ? <td> <div class="vb-table__checkbox"> <vCheckbox value={this.isChecked} onChange={value => this.handlerChange(value)}></vCheckbox> </div></td> : null
+                    this.checkable ? <td> <div class="vb-table__checkbox"> <vCheckbox value={this.isChecked} onChange={value => this.handlerChange(value)}><span></span></vCheckbox> </div></td> : null
                 }
                 {
                     this.showIndex ? <td> #{this.index + 1} </td> : null

@@ -2,48 +2,36 @@
     Created by linfengluo@gmail.com on 2017/9/21.
 -->
 <template>
-    <transition name="message">
-        <article class="message message-content"
+    <transition name="notify">
+        <article class="message notify"
                  :class="[colorClass, sizeClass, customClass]"
                  v-show="isShow"
         >
-            <div class="message-header" v-if="title">
-                <p class="message-title">
-                    <vIcon :name="iconClass" :size="size"></vIcon>
-                    <span v-text="title" class="message-title-text"></span>
-                </p>
-                <button class="delete"
-                        :class="[sizeClass]"
-                        aria-label="delete"
-                        @click="close"
-                        v-if="closeable">
-                </button>
-            </div>
-            <div class="message-body noneBorder"
-                 :class="{
-                    'is-noneTitle': !title
-                 }"
+            <div class="message-body is-noneTitle"
                  @click="handlerClick">
-                <div class="message-body-icon" v-if="!title">
+                <div class="message-body-icon">
                     <vIcon :name="iconClass" :size="size" :color="type === 'light' ? 'info' : type"></vIcon>
                 </div>
-                <div class="message-body-content" v-text="message"></div>
+                <div class="message-body-content">
+                    <p class="message-body-title" v-text="title"></p>
+                    <p v-text="message"></p>
+                </div>
                 <div class="message-body-btn">
                     <button class="delete"
                             :class="[sizeClass]"
                             aria-label="delete"
                             @click="close"
-                            v-if="!title && closeable">
+                            v-if="closeable">
                     </button>
                 </div>
             </div>
         </article>
-
     </transition>
 </template>
 
 <script>
-    import vIcon from '../../elements/icon'
+    import vIcon from '../../icon'
+    import vTitle from '../../title'
     export default {
         props: {
             type: String,
@@ -65,6 +53,10 @@
                 default: 'Notify'
             }
         },
+        components: {
+            vIcon,
+            vTitle
+        },
         data() {
             return {
                 isShow: false,
@@ -81,22 +73,19 @@
             }
         },
         beforeMount() {
-            let $messageWarp = document.querySelector('.message-wrap')
-            if (!$messageWarp){
-                $messageWarp = document.createElement('div')
-                $messageWarp.classList.add('message-wrap')
-                document.body.appendChild($messageWarp)
+            let $notifyWarp = document.querySelector('.notifications')
+            if (!$notifyWarp){
+                $notifyWarp = document.createElement('div')
+                $notifyWarp.classList.add('notifications')
+                document.body.appendChild($notifyWarp)
             }
-            $messageWarp.appendChild(this.$el)
+            $notifyWarp.appendChild(this.$el)
         },
         mounted(){
             this.isShow = true
             if (this.duration !== 0) {
                 this.timer = setTimeout(() => this.close(), this.duration)
             }
-        },
-        components: {
-            vIcon
         },
         computed: {
             colorClass(){
@@ -122,7 +111,7 @@
                 setTimeout(() => {
                     this.$destroy()
                     this.$el.remove()
-                }, 300)
+                }, 100)
                 this.onClose && this.onClose()
             },
 
@@ -134,28 +123,17 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-
-    .message{
-        position: fixed;
-        left: 50%;
-        top: 30px;
-        transform: translateX(-50%);
-        transition: all .3s;
-        opacity:1;
-        box-shadow: 0 0 5px rgba(0,0,0,.3);
-        min-width: 250px;
-        box-sizing: border-box;
-        overflow: hidden;
-        z-index: 1050;
+    .notify{
+        transition: all .5s;
     }
 
-    .message.message-enter{
+    .notify.notify-enter{
         opacity:0;
-        transform: translate3d(-50%, -50px, 0);
+        transform: translate3d(400px, 0, 0);
     }
 
-    .message.message-leave-active {
+    .notify.notify-leave-active {
         opacity:0;
-        transform: translate3d(-50%, -50px, 0);
+        transform: translate3d(400px, 0, 0);
     }
 </style>

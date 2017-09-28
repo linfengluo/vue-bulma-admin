@@ -36,7 +36,7 @@
         componentName: 'checkboxItem',
         props: {
             label: {
-                type: String,
+                type: [String, Number, Boolean],
                 default: ''
             },
             value: {
@@ -69,7 +69,7 @@
         },
         computed: {
             isChecked(){
-                return this.isGroup ? this.checkboxGroup.value.indexOf(this.value) > -1 : this.selfValue
+                return this.isGroup ? this.checkboxGroup.value.indexOf(this.label) > -1 : this.selfValue
             },
 
             isOverLength(){
@@ -91,7 +91,7 @@
             // 初始化selected
             initSelected(){
                 if (this.isGroup) {
-                    this.checked && this.checkboxGroup.insertSelected(this.value)
+                    this.checked && this.checkboxGroup.insertSelected(this.label)
                 } else {
                     if (this.checked) {
                         this.selfValue = true
@@ -119,7 +119,7 @@
                     return false
                 } else {
                     if (this.isGroup) {
-                        this.isChecked ? this.checkboxGroup.removeUnSelected(this.value) : this.checkboxGroup.insertSelected(this.value)
+                        this.isChecked ? this.checkboxGroup.removeUnSelected(this.label) : this.checkboxGroup.insertSelected(this.label)
                     } else {
                         this.selfValue = !this.selfValue
                         this.$emit('change', this.selfValue)
@@ -132,7 +132,7 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-    @import "../../sass/variables/variables";
+    @import "../../../sass/variables/_variables";
     .vb-checkbox{
         padding-left: 20px;
         min-height: 16px;

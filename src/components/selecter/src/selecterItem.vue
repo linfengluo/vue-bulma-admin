@@ -12,6 +12,8 @@
 
 <script>
     export default {
+        name: 'selectOption',
+        componentName: 'selectOption',
         props: {
             value: {
                 type: String,

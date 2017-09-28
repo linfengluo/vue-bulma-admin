@@ -39,7 +39,7 @@
 </template>
 
 <script>
-    import vIcon from '../../elements/icon'
+    import vIcon from '../../icon'
     export default {
         props: {
             type: String,

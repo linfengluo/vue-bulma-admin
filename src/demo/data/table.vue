@@ -246,7 +246,7 @@ export default {
     import vTitle from '../../components/title'
     import {vButton} from '../../components/button'
     import {vTable, vTableCol} from '../../components/table/index'
-    import vSwitch from '../../components/switch/switch.vue'
+    import vSwitch from '../../components/switch/src/switch.vue'
 
     export default {
         data() {

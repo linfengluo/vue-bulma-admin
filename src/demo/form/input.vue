@@ -183,7 +183,7 @@ export default {
     import {vRow, vCol} from '../../components/layout/columns/main'
     import vTitle from '../../components/title'
     import {vButton} from '../../components/button'
-    import vInput from '../../components/input/input.vue'
+    import vInput from '../../components/input/src/input.vue'
 
     export default {
         data() {
