@@ -71,9 +71,14 @@ const menu = [
                 {
                     title: 'Switch',
                     link: '/form/switch'
-                }, {
+                },
+                {
                     title: 'Datepicker',
                     link: '/form/datepicker'
+                },
+                {
+                    title: 'Editor',
+                    link: '/form/editor'
                 },
                 {
                     title: 'Form',

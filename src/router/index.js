@@ -9,6 +9,7 @@ const Selecter = resolve => require(['../demo/form/selecter.vue'], resolve)
 const Raido = resolve => require(['../demo/form/radio.vue'], resolve)
 const Switch = resolve => require(['../demo/form/switch.vue'], resolve)
 const Datepicker = resolve => require(['../demo/form/datepicker.vue'], resolve)
+const Editor = resolve => require(['../demo/form/editor.vue'], resolve)
 const Form = resolve => require(['../demo/form/form.vue'], resolve)
 
 const Button = resolve => require(['../demo/elements/button.vue'], resolve)
@@ -56,6 +57,10 @@ export default new Router({
                     path: '/form/datepicker',
                     name: 'Datepicker',
                     component: Datepicker
+                }, {
+                    path: '/form/editor',
+                    name: 'Editor',
+                    component: Editor
                 }, {
                     path: '/form/form',
                     name: 'Form',
