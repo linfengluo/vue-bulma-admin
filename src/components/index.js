@@ -23,6 +23,7 @@ import Switch from './switch'
 import {Table, TableCol} from './table'
 import Textarea from './textarea'
 import Title from './title'
+import Badge from './badge'
 
 import {Row, Col} from './columns'
 import {Content, ContentHeader} from './layout/content'
@@ -58,7 +59,8 @@ const components = [
     Content,
     ContentHeader,
     Header,
-    NavMenu
+    NavMenu,
+    Badge
 ]
 
 const install = function(Vue, options = {}) {

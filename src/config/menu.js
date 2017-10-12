@@ -96,6 +96,9 @@ const menu = [
                 {
                     title: 'Table',
                     link: '/data/table'
+                }, {
+                    title: 'Badge',
+                    link: '/data/badge'
                 }
             ]
         }]

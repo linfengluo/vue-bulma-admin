@@ -15,6 +15,7 @@ const Form = resolve => require(['../demo/form/form.vue'], resolve)
 const Button = resolve => require(['../demo/elements/button.vue'], resolve)
 
 const Table = resolve => require(['../demo/data/table.vue'], resolve)
+const Badge = resolve => require(['../demo/data/badge.vue'], resolve)
 
 const Notify = resolve => require(['../demo/notice/notify.vue'], resolve)
 const Message = resolve => require(['../demo/notice/message.vue'], resolve)
@@ -73,6 +74,10 @@ export default new Router({
                     path: '/data/table',
                     name: 'Table',
                     component: Table
+                }, {
+                    path: '/data/badge',
+                    name: 'Badge',
+                    component: Badge
                 }, {
                     path: '/notice/notify',
                     name: 'Notify',

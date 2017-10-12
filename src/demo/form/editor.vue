@@ -19,9 +19,11 @@
         <vCodePanel>
             <vb-row>
                 <vb-col>
-                    <vb-editor v-model="content1" placeholder="static editor"
+                    <vb-editor v-model="content1"
+                               placeholder="static editor"
                                @imageUpload="handlerUpload"
-                               :uploadConfig="updateConfig"></vb-editor>
+                               :uploadConfig="updateConfig">
+                    </vb-editor>
                 </vb-col>
             </vb-row>
         </vCodePanel>
@@ -34,7 +36,10 @@
         <vCodePanel>
             <vb-row>
                 <vb-col>
-                    <vb-editor v-model="content2" :toolbarOption="toolBarConfig" placeholder="diy Toolbar"></vb-editor>
+                    <vb-editor v-model="content2"
+                               :toolbarOption="toolBarConfig"
+                               placeholder="diy Toolbar">
+                    </vb-editor>
                 </vb-col>
             </vb-row>
         </vCodePanel>
@@ -47,7 +52,10 @@
         <vCodePanel>
             <vb-row>
                 <vb-col>
-                    <vb-editor v-model="content3" minHeight="200" placeholder="minHeight = 200"></vb-editor>
+                    <vb-editor v-model="content3"
+                               minHeight="200"
+                               placeholder="minHeight = 200">
+                    </vb-editor>
                 </vb-col>
             </vb-row>
         </vCodePanel>
@@ -58,7 +66,6 @@
 <script>
     import axios from 'axios'
     import vCodePanel from '../../components/codePanel/codePanel.vue'
-//    import EXIF from '../../units/small-exif'
     export default {
         data() {
             return {
