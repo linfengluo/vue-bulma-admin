@@ -37,7 +37,7 @@
         componentName: 'vb-selecter',
         props: {
             value: {
-                type: String,
+                type: [String, Number],
                 default: ''
             },
             color: {

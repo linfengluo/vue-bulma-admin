@@ -99,6 +99,9 @@ const menu = [
                 }, {
                     title: 'Badge',
                     link: '/data/badge'
+                }, {
+                    title: 'Panigation',
+                    link: '/data/panigation'
                 }
             ]
         }]

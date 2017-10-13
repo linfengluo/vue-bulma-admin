@@ -24,6 +24,7 @@ import {Table, TableCol} from './table'
 import Textarea from './textarea'
 import Title from './title'
 import Badge from './badge'
+import Pagination from './pagination'
 
 import {Row, Col} from './columns'
 import {Content, ContentHeader} from './layout/content'
@@ -60,7 +61,8 @@ const components = [
     ContentHeader,
     Header,
     NavMenu,
-    Badge
+    Badge,
+    Pagination
 ]
 
 const install = function(Vue, options = {}) {

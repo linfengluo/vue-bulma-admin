@@ -27,6 +27,7 @@
                    :minlength="minlength"
                    :autocomplete="autoComplete"
                    :autofocus="autofocus"
+                   :value="currentValue"
                    @focus="handleFocus"
                    @blur="handleBlur"
                    @input="handleInput"
@@ -130,6 +131,9 @@
                 }
             }
         },
+        mounted(){
+            this.setValue(this.value)
+        },
         components: {
             vIcon
         },
@@ -150,7 +154,7 @@
         methods: {
             setValue(val){
                 if (val !== this.currentValue) {
-                    this.currentValue = this.val
+                    this.currentValue = val
                 } else {
                     return false
                 }

@@ -16,6 +16,7 @@ const Button = resolve => require(['../demo/elements/button.vue'], resolve)
 
 const Table = resolve => require(['../demo/data/table.vue'], resolve)
 const Badge = resolve => require(['../demo/data/badge.vue'], resolve)
+const Panigation = resolve => require(['../demo/data/panigation.vue'], resolve)
 
 const Notify = resolve => require(['../demo/notice/notify.vue'], resolve)
 const Message = resolve => require(['../demo/notice/message.vue'], resolve)
@@ -78,6 +79,10 @@ export default new Router({
                     path: '/data/badge',
                     name: 'Badge',
                     component: Badge
+                }, {
+                    path: '/data/panigation',
+                    name: 'Panigation',
+                    component: Panigation
                 }, {
                     path: '/notice/notify',
                     name: 'Notify',

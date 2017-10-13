@@ -4,6 +4,8 @@
 
 在偶然的机会下不自觉的喜欢上了bulma风格，也在github中找到了许多基于vue和bulma仓库，但是使用起来多多少少有些许限制，所以根据平时开发后台系统的经验，在前人的基础上完善基于vue和bulma的后台模板。
 
+[demo](http://demo.luolinfeng.com/vbulma/)
+
 # 安装 && 开发
 
 ## Build Setup
