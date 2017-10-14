@@ -10,27 +10,6 @@ const menu = [
         childern: []
     },
     {
-        title: 'Layout 布局',
-        icon: 'table',
-        link: '',
-        childern: [{
-            menu: [
-                {
-                    title: 'header',
-                    link: ''
-                },
-                {
-                    title: 'asideMenu',
-                    link: ''
-                },
-                {
-                    title: 'content',
-                    link: ''
-                }
-            ]
-        }]
-    },
-    {
         title: 'Elements 元素',
         icon: 'cube',
         link: '',
